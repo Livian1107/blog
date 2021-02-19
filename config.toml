@@ -27,7 +27,7 @@ profilePicture = "/images/livian.jpg"
 keywords = ""
 favicon = "favicons/"
 # example ["css/custom.css"]
-customCss = []
+customCss = ["css/style.css"]
 # example ["js/custom.js"]
 customJs = [] 
 mainSections = ["post"]
