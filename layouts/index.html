@@ -1,0 +1,110 @@
+{{ define "main" }}
+<div class="sidebar">
+
+    <div class="logo-title">
+        <div class="title">
+            <img src="{{ .Site.Params.profilePicture | absURL }}" alt="profile picture">
+            <h3 title=""><a href="/">{{ .Site.Params.Title }}</a></h3>
+            <h4>I'm a software engineer working in financial market. </h4>
+            <h5>I'm passionate about leveraging technology to reduce tedious work and improve efficiency.</h5>
+            <h5>I love &#9749; &#129360; &#127863;</h5>
+            <h5>I play 🂡 🏋️ 🏊 📚</h5>
+            <h5>My 2021 
+                <span style="color: #DC143C;">study goals</span> & 
+                <span style="color: #4ec7f3;;">reading list</span></h5>
+            <!-- <div class="description">
+                {{ .Site.Params.description }}
+            </div> -->
+        </div>
+    </div>   
+    <div id=intro>
+        Make 
+        <div id=flip>
+        <div><div>wOrK</div></div>
+        <div><div>life</div></div>
+        <div><div>Everything</div></div>
+        </div>
+        AweSoMe!
+    </div>
+    <ul class="social-links">
+        {{ range $item := .Site.Params.socialIcons }}
+            <li>
+                <a href="{{ $item.url }}" rel="me" aria-label="{{ $item.title }}">
+                    <i class="{{ $item.icon }} fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        {{ end }}
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; {{ .Site.Params.author }} {{ if isset .Site.Params "copyright" }} {{ .Site.Params.copyright }} {{ else }} {{ now.Format "2006"}} {{end}}</div>
+    </div>
+</div>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+body {
+  margin:0px;
+  font-family:'Roboto';
+  text-align:center;
+}
+
+#intro {
+  color:#999;
+  text-transform: uppercase;
+  font-size:36px;
+  font-weight:bold;
+  width:100%;
+  display:block;
+}
+
+#flip {
+  height:50px;
+  overflow:hidden;
+}
+
+#flip > div > div {
+  color:#fff;
+  padding:4px 12px;
+  height:45px;
+  margin-bottom:45px;
+  display:inline-block;
+}
+
+#flip div:first-child {
+  animation: show 5s linear infinite;
+}
+
+#flip div div {
+  background:#42c58a;
+}
+#flip div:first-child div {
+  background:#4ec7f3;
+}
+#flip div:last-child div {
+  background:#DC143C;
+}
+
+@keyframes show {
+  0% {margin-top:-270px;}
+  5% {margin-top:-180px;}
+  33% {margin-top:-180px;}
+  38% {margin-top:-90px;}
+  66% {margin-top:-90px;}
+  71% {margin-top:0px;}
+  99.99% {margin-top:0px;}
+  100% {margin-top:-270px;}
+}
+
+p {
+  position:fixed;
+  width:100%;
+  bottom:30px;
+  font-size:12px;
+  color:#999;
+  margin-top:200px;
+}
+</style> 
+{{ end }}
+
+
