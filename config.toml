@@ -23,7 +23,7 @@ title = "Hello World! I'm Liwen Lai"
 author = "Liwen Lai"
 #copyright = "2021"
 description = "I am a software engineer working in financial industry. Always hungry to keep learning. ivi"
-profilePicture = "/images/livian.jpg"
+profilePicture = "images/livian.jpg"
 keywords = ""
 favicon = "favicons/"
 # example ["css/custom.css"]
@@ -55,7 +55,7 @@ use = "katex"  # options: "katex", "mathjax". default is "katex".
 [[params.socialIcons]]
 icon = "fab fa-linkedin"
 title = "Linkedin"
-url = "https://de.linkedin.com/liwen-lai-ba0b30158"
+url = "https://in.linkedin.com/in/liwen-lai-ba0b30158"
 
 [[params.socialIcons]]
 icon = "fab fa-github"
@@ -88,9 +88,4 @@ url = "mailto:liwenlai1107@gmail.com"
   weight = 300
   identifier = "about"
   url = "/about/"
-
-  #[[menu.main]]
-  #name = "Contact"
-  #weight = 400
-  #identifier = "contact"
-  #url = "/contact/"
+  
