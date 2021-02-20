@@ -4,14 +4,13 @@
     <div class="logo-title">
         <div class="title">
             <img src="{{ .Site.Params.profilePicture | absURL }}" alt="profile picture">
-            <h3 title=""><a href="/">{{ .Site.Params.Title }}</a></h3>
-            <h4>I'm a software engineer working in financial market. </h4>
-            <h5>I'm passionate about leveraging technology to reduce tedious work and improve efficiency.</h5>
-            <h5>I love &#9749; &#129360; &#127863;</h5>
-            <h5>I play 🂡 🏋️ 🏊 📚</h5>
-            <h5>My 2021 
+            <h3>Hello world! I'm <span style="color: #fff; background:#DC143C; padding: 4px;">LIWEN LAI</span></h3>
+            <span id=mylife>I'm a <span style="color: #fff; background:#4ec7f3; padding: 2px;">software engineer</span> working in financial market. 
+            I'm passionate about leveraging technology to reduce tedious work and improve efficiency.</span><br/>
+            <span id=mylife style="color: #fff; background:#42c58a; padding: 2px;">I love &#9749; &#129360; &#127863; I play 🂡 🏋️ 🏊 📚</span>
+            <p id=mylife>My 2021 
                 <span style="color: #DC143C;">study goals</span> & 
-                <span style="color: #4ec7f3;;">reading list</span></h5>
+                <span style="color: #4ec7f3;;">reading list</span></p>
             <!-- <div class="description">
                 {{ .Site.Params.description }}
             </div> -->
@@ -47,6 +46,15 @@ body {
   margin:0px;
   font-family:'Roboto';
   text-align:center;
+}
+
+.title {
+  padding: 0 15px;
+}
+
+#mylife {
+  font-size: 20px;
+  padding: 0 30px;
 }
 
 #intro {
@@ -96,14 +104,22 @@ body {
   100% {margin-top:-270px;}
 }
 
-p {
-  position:fixed;
-  width:100%;
-  bottom:30px;
-  font-size:12px;
-  color:#999;
-  margin-top:200px;
+@media screen and (max-width: 960px),
+print {
+  #intro {
+    font-size: 25px;
+  }
+
+  #mylife {
+    font-size: 16px;
+    padding: 0 20px;
+  }
+
+  #flip {
+    height: 38px;
+  }
 }
+
 </style> 
 {{ end }}
 

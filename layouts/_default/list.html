@@ -25,7 +25,7 @@
                 <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a>
                 </h3>
             </div>
-            <div class="post-content">
+            <div class="post-summary">
                 <div class="p_part"><p>{{ .Summary }}</p></div>
             </div>
             <div class="post-footer">
@@ -57,6 +57,13 @@
         width: 60%;
         margin: auto;
     }
+@media screen and (max-width: 960px),
+print {
+    #posts {
+        width: 80%;
+    }
+}
+
 </style>
     <!-- <div class="archive {{ with .Site.Params.doNotLoadAnimations }} . {{ else }} animated fadeInDown {{ end }}">
         <ul class="list-with-title">
