@@ -1,0 +1,52 @@
+<header>
+  <h1 class="page-title" property="name">Liwen Lai</h1>
+  <p class="h4">Software Engineer</p>
+</header>
+  <!-- <p class="note p-note">Hi, I am passionate abou</p> -->
+  <div> 
+    <a href="{{ .Site.Params.resume | absURL }}" download="LIWEN_LAI">Download My CV </a> 
+  </div>
+ 
+  <style>
+    .hr-bottom{
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .note:before{
+      content: "Summary";
+      font-size: 0.667rem;
+      font-weight: bold;
+      font-style: normal;
+      letter-spacing: .025rem;
+      text-transform: uppercase;
+      color: #bbb;
+      position: absolute;
+      top: 0;
+    }
+    
+    .note {
+      background: transparent;
+      color: #333;
+      font-size: smaller;
+      border-left: 1px solid #ebebeb;
+      padding: 1.2rem 1rem 0 1rem;
+      margin: 1rem -1rem;
+      position: relative;
+      font-size: 1rem;
+    }
+
+    .faded, .figcaption, figure, .figure, .read-more {
+      color: #777;
+    }
+
+    .layout-resume .h4 {
+      margin-top: 0;
+      font-family: Noto Sans,Helvetica,Arial,sans-serift;
+      font-weight: 700;
+    }
+
+    .section-title {
+      font-size: 18px;
+    }
+      
+  </style>

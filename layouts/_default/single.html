@@ -25,6 +25,10 @@
               {{- partial "contact.html" . -}}
             {{- end -}}
 
+            {{- if (eq .Params.about true) -}}
+              {{- partial "about.html" . -}}
+            {{- end -}}
+
         </div>
         <div class="post-footer">
             <div class="info">
