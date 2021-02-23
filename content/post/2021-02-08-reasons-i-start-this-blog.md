@@ -2,7 +2,7 @@
 author = "Liwen"
 title = "Reasons I start this blog"
 date = "2021-02-08"
-description = "ome self-reflections through my learning journey."
+description = "Some self-reflections through my learning journey."
 tags = [
     "Learning Journey",
 ]
