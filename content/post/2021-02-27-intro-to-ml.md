@@ -1,6 +1,6 @@
 +++
 author = "Liwen"
-title = "Introduction to Machine Learning & Deep Learing"
+title = "Introduction to Machine Learning"
 date = "2021-02-27"
 description = "Notes from Kaggle courses"
 tags = [
