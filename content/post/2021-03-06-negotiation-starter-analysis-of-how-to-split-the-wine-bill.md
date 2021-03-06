@@ -67,5 +67,20 @@ New situation:
 
 What's the PIE here?
 
+|        | Whole Bottle | First Half Bottle | Second Half Bottle |
+|--------|:------------:|:-----------------:|:------------------:|
+| Andrea | $160         | $90               | $70                |
+| Beth   | $80          | $50               | $30                |
+
+If no deal, gain = $160 + $0 - $100 = $60.
+
+If deal, combined value of bottle is $90 + $50 = $140, gain = $140 - $100 = $40.
+
+Hence PIE = $40 - $60 = -$20.
+
+However, this is not correct as it is better to have no deal to make PIE = $0. Second half bottle valuation to Andrea is $70 while half bottle is only $50 to Beth. 
+Devaluation of the half bottle make it better to have no deal. 
+
+
 ###### Note: All the materials are shared for learning purpose, originally from Yale University lecturer @ Barry Nalebuff.
 
