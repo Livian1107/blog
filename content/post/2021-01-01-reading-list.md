@@ -1,0 +1,51 @@
++++
+author = "Liwen"
+title = "Reading List"
+date = "2021-01-01"
+description = "Reading list of 2021"
+tags = [
+    "Books of 2021",
+]
++++
+
+* <What I Wish I Knew When I Was 20> - Tina Seelig
+
+The book is a gift from a creative and inspiring Stanford teacher, Tina Seeling
+to her son Josh's 20th birthday. Tina has shared her past assignments experiences with students
+in school and summarized into 10 chapters. In summary, she encourages youth to give themselves 
+permission to challenge assumptions, to look at the world with fresh eyes, to experiment, to fail, 
+to plot their own course, and to test the limits of their abilities.
+
+There are mainly three parts/stories that make me feel so inspiring and empowered. 
+1. Struggling to figure out what to do with my life? 
+
+This is a question I have been thinking about when I was half way through my university life.
+At that time, I gave myself an escape to Sweden for a half year exchange school life to find the answer. I always missed that piece of my lifetime 
+when I could be so close to the nature and really enjoy the life itself. I wouuld take the 7:00AM yoga class and then go to the school. However, grown 
+up and back to the competitive city life, leaving me very little time or space to really figure out the question. Ever slow movement or thought could make me 
+left behind. Somtimes I feel myself trapped in those stilling buildings in CBD. They attract and invite me in until they drain all my energy.   
+
+Well, Tina's view to this question is very inspiring. She said, though we think key success is to follow the passions, it
+is also important to make adjustment according to the talents. For example, you love Jazz, you could go to the concerts but you don't necessarily have to be a Jazz
+professinal. Passions are just a starting point. 
+
+We also have to know our talents and how the world would value them. Think about it, if you are passinate about something
+but not particularly good at it. It's going to be pretty frustrating to try to craft a career in that area. On the other hand, we may want to turn those into wonderful hobbies.
+
+It is important to reassess life and career relatively and frequently. Don't be in a rush to get to the final destination - the side trips and unexpected detours quite often lead to the
+most interesting people , places and opportunities. Quoted from one my talented friend, _life is exponential instead of linear - we need to find our own alpha._
+
+2. Challenge you to see yourself and the world in a fresh light.
+
+We should always keep in mind that, the bigger the problem, the bigger the opportunity. Nobody will pay you to solve a non-problem. We shouldn't 
+frame the problems too tightly. Instead, adjust the attitude and seek the creative ways to use the resources already at your disposal.
+
+3. Tina points out the big difference between trying to do something and actually doing it. 
+
+We oftern say we're trying to lose weight, get more exercise, find a job, etc. Put into action
+is much more difficult than it is thought in the head. I made excuse to myself to some hard assignments during the college life rather than taking all chances to be fabulous. Well, I should
+have removed the cap and been willing to reach my true potential. This means going beyong minimum expectations and acknowledging that we are ultimately responsible for our actions and the resulting
+outcomes. Life isn't a dress rehearsal and we won't get a second chance to do the best.
+
+* <价值> - 张磊
+
