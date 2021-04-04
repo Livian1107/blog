@@ -2,7 +2,7 @@
 author = "Liwen"
 title = "CFA I - Derivatives"
 date = "2021-03-01"
-description = "Notes from Coursera"
+description = "Notes from CFA"
 tags = [
     "CFA I",
 ]
