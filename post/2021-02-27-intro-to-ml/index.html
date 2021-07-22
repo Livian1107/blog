@@ -1,8 +1,68 @@
-<!doctype html><html lang=en data-theme><head><title>Liwen Lai | Introduction to Machine Learning</title><meta charset=utf-8><meta name=generator content="Hugo 0.83.1"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name=description content="I am a software engineer working in financial industry. Always hungry to keep learning. ivi"><link rel=stylesheet href=https://livian1107.github.io/blog/css/style.min.0c643de4008adca329f7a2d616ce308cca99d4ef45e4cca307323e7857910194.css integrity="sha256-DGQ95ACK3KMp96LWFs4wjMqZ1O9F5MyjBzI+eFeRAZQ=" crossorigin=anonymous type=text/css><link rel=stylesheet href=https://livian1107.github.io/blog/css/markupHighlight.min.f798cbda9aaa38f89eb38be6414bd082cfd71a6780375cbf67b6d2fb2b96491e.css integrity="sha256-95jL2pqqOPies4vmQUvQgs/XGmeAN1y/Z7bS+yuWSR4=" crossorigin=anonymous type=text/css><link rel=stylesheet href=https://livian1107.github.io/blog/css/style.min.0c643de4008adca329f7a2d616ce308cca99d4ef45e4cca307323e7857910194.css integrity="sha256-DGQ95ACK3KMp96LWFs4wjMqZ1O9F5MyjBzI+eFeRAZQ=" crossorigin=anonymous media=screen><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin=anonymous><link rel="shortcut icon" href=https://livian1107.github.io/blog/favicons/favicon.ico type=image/x-icon><link rel=apple-touch-icon sizes=180x180 href=https://livian1107.github.io/blog/favicons/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=https://livian1107.github.io/blog/favicons/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=https://livian1107.github.io/blog/favicons/favicon-16x16.png><link rel=canonical href=https://livian1107.github.io/blog/post/2021-02-27-intro-to-ml/><script type=text/javascript src=https://livian1107.github.io/blog/js/anatole-header.min.0c05c0a90d28c968a1cad4fb31abd0b8e1264e788ccefed022ae1d3b6f627514.js integrity="sha256-DAXAqQ0oyWihytT7MavQuOEmTniMzv7QIq4dO29idRQ=" crossorigin=anonymous></script><script type=text/javascript src=https://livian1107.github.io/blog/js/anatole-theme-switcher.min.8ef71e0fd43f21a303733dbbecae5438b791d2b826c68a9883bd7aa459a076d2.js integrity="sha256-jvceD9Q/IaMDcz277K5UOLeR0rgmxoqYg716pFmgdtI=" crossorigin=anonymous></script><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://livian1107.github.io/blog/images/scarcity.jpg"><meta name=twitter:title content="Introduction to Machine Learning"><meta name=twitter:description content="Notes from Kaggle courses"></head><body><div class=main><div class="page-top animated fadeInDown"><a role=button class=navbar-burger data-target=navMenu aria-label=menu aria-expanded=false><span aria-hidden=true></span><span aria-hidden=true></span><span aria-hidden=true></span></a><ul class=nav id=navMenu><li><a href=/blog/ title>Home</a></li><li><a href=/blog/post/ title>Posts</a></li><li><a href=/blog/about/ title>About</a></li><li><a href=/blog/contact/ title>Contact</a></li><li class=theme-switch-item><a class=theme-switch title="Switch Theme"><i class="fas fa-adjust fa-fw" aria-hidden=true></i></a></li></ul></div><div class=autopagerize_page_element><div class=content><div class="post animated fadeInDown"><div class=post-content><div class=post-title><h3>Introduction to Machine Learning</h3><div class=info><em class="fas fa-calendar-day"></em><span class=date>Sat, Feb 27, 2021</span>
-<em class="fas fa-stopwatch"></em><span class=reading-time>9-minute read</span></div></div><h3 id=how-models-work>How Models Work</h3><p>Machine learning works in a similar way to identify the patterns from historical data set
+<!doctype html><html lang=en data-theme><head>
+<title> Liwen Lai | Introduction to Machine Learning </title>
+<meta charset=utf-8><meta name=generator content="Hugo 0.86.0"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name=description content="I am a software engineer working in financial industry. Always hungry to keep learning. ivi">
+<link rel=stylesheet href=https://livian1107.github.io/blog/css/style.min.0c643de4008adca329f7a2d616ce308cca99d4ef45e4cca307323e7857910194.css integrity="sha256-DGQ95ACK3KMp96LWFs4wjMqZ1O9F5MyjBzI+eFeRAZQ=" crossorigin=anonymous type=text/css>
+<link rel=stylesheet href=https://livian1107.github.io/blog/css/markupHighlight.min.f798cbda9aaa38f89eb38be6414bd082cfd71a6780375cbf67b6d2fb2b96491e.css integrity="sha256-95jL2pqqOPies4vmQUvQgs/XGmeAN1y/Z7bS+yuWSR4=" crossorigin=anonymous type=text/css>
+<link rel=stylesheet href=https://livian1107.github.io/blog/css/style.min.0c643de4008adca329f7a2d616ce308cca99d4ef45e4cca307323e7857910194.css integrity="sha256-DGQ95ACK3KMp96LWFs4wjMqZ1O9F5MyjBzI+eFeRAZQ=" crossorigin=anonymous media=screen>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin=anonymous>
+<link rel="shortcut icon" href=https://livian1107.github.io/blog/favicons/favicon.ico type=image/x-icon>
+<link rel=apple-touch-icon sizes=180x180 href=https://livian1107.github.io/blog/favicons/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=https://livian1107.github.io/blog/favicons/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=https://livian1107.github.io/blog/favicons/favicon-16x16.png>
+<link rel=canonical href=https://livian1107.github.io/blog/post/2021-02-27-intro-to-ml/>
+<script type=text/javascript src=https://livian1107.github.io/blog/js/anatole-header.min.0c05c0a90d28c968a1cad4fb31abd0b8e1264e788ccefed022ae1d3b6f627514.js integrity="sha256-DAXAqQ0oyWihytT7MavQuOEmTniMzv7QIq4dO29idRQ=" crossorigin=anonymous></script>
+<script type=text/javascript src=https://livian1107.github.io/blog/js/anatole-theme-switcher.min.8ef71e0fd43f21a303733dbbecae5438b791d2b826c68a9883bd7aa459a076d2.js integrity="sha256-jvceD9Q/IaMDcz277K5UOLeR0rgmxoqYg716pFmgdtI=" crossorigin=anonymous></script>
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://livian1107.github.io/blog/images/scarcity.jpg">
+<meta name=twitter:title content="Introduction to Machine Learning">
+<meta name=twitter:description content="Notes from Kaggle courses">
+</head>
+<body>
+<div class=main>
+<div class="page-top animated fadeInDown">
+<a role=button class=navbar-burger data-target=navMenu aria-label=menu aria-expanded=false>
+<span aria-hidden=true></span>
+<span aria-hidden=true></span>
+<span aria-hidden=true></span>
+</a>
+<ul class=nav id=navMenu>
+<li><a href=/blog/ title>Home</a></li>
+<li><a href=/blog/post/ title>Posts</a></li>
+<li><a href=/blog/about/ title>About</a></li>
+<li><a href=/blog/contact/ title>Contact</a></li>
+<li class=theme-switch-item>
+<a class=theme-switch title="Switch Theme">
+<i class="fas fa-adjust fa-fw" aria-hidden=true></i>
+</a>
+</li>
+</ul>
+</div>
+<div class=autopagerize_page_element>
+<div class=content>
+<div class="post animated fadeInDown">
+<div class=post-content>
+<div class=post-title>
+<h3>Introduction to Machine Learning</h3>
+<div class=info>
+<em class="fas fa-calendar-day"></em>
+<span class=date> Sat, Feb 27, 2021
+</span>
+<em class="fas fa-stopwatch"></em>
+<span class=reading-time>9-minute read</span>
+</div>
+</div>
+<h3 id=how-models-work>How Models Work</h3>
+<p>Machine learning works in a similar way to identify the patterns from historical data set
 and use those patterns to make predictions for future decesions.
-<strong>Decision Tree</strong> is the basic building blcok for data science models.</p><p><img src=https://livian1107.github.io/blog/images/decisionTree.png alt=DT></p><p>In the example provided in <a href=https://www.kaggle.com/dansbecker/how-models-work>Kaggle</a> course, it uses data to divide
-houses into two groups and then determine the predicted price in each group.</p><p><strong>Fitting/Training</strong> model: capture patterns from data</p><p><strong>Training</strong> data: the data used to fit the model</p><p><strong>Leaf</strong>: the point at the bottom of Decision Tree where making a prediction</p><div class=highlight><pre class=chroma><code class=language-Python data-lang=Python><span class=kn>import</span> <span class=nn>pandas</span> <span class=kn>as</span> <span class=nn>pd</span>
+<strong>Decision Tree</strong> is the basic building blcok for data science models.</p>
+<p><img src=https://livian1107.github.io/blog/images/decisionTree.png alt=DT></p>
+<p>In the example provided in <a href=https://www.kaggle.com/dansbecker/how-models-work>Kaggle</a> course, it uses data to divide
+houses into two groups and then determine the predicted price in each group.</p>
+<p><strong>Fitting/Training</strong> model: capture patterns from data</p>
+<p><strong>Training</strong> data: the data used to fit the model</p>
+<p><strong>Leaf</strong>: the point at the bottom of Decision Tree where making a prediction</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-Python data-lang=Python><span class=kn>import</span> <span class=nn>pandas</span> <span class=k>as</span> <span class=nn>pd</span>
 
 <span class=c1># Path of the file to read</span>
 <span class=n>iowa_file_path</span> <span class=o>=</span> <span class=s1>&#39;../input/home-data-for-ml-course/train.csv&#39;</span>
@@ -20,15 +80,28 @@ houses into two groups and then determine the predicted price in each group.</p>
 <span class=n>home_data</span> <span class=o>=</span> <span class=n>home_data</span><span class=o>.</span><span class=n>dropna</span><span class=p>(</span><span class=n>axis</span><span class=o>=</span><span class=mi>0</span><span class=p>)</span>
 </code></pre></div><p>When dataset had too many variables, we may want to pick few or prioritize variables.
 The <a href=https://www.kaggle.com/learn/pandas>Pandas Micro-Course</a> covers how to select a subset of data in more depth.
-Two starting approaches:</p><ol><li><em>Dot notation</em>: use to select the &ldquo;prediction target&rdquo;. The single column is stored in a Series.</li><li><em>Chosing &ldquo;Features&rdquo;</em>: use to select the &ldquo;features&rdquo;. The columns are inputted into our model and later to make predictions.</li></ol><div class=highlight><pre class=chroma><code class=language-Python data-lang=Python><span class=c1># Prediction target</span>
+Two starting approaches:</p>
+<ol>
+<li><em>Dot notation</em>: use to select the &ldquo;prediction target&rdquo;. The single column is stored in a Series.</li>
+<li><em>Chosing &ldquo;Features&rdquo;</em>: use to select the &ldquo;features&rdquo;. The columns are inputted into our model and later to make predictions.</li>
+</ol>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-Python data-lang=Python><span class=c1># Prediction target</span>
 <span class=n>y</span> <span class=o>=</span> <span class=n>home_data</span><span class=o>.</span><span class=n>Price</span>
 
 <span class=c1># Chosing features</span>
 <span class=n>home_features</span> <span class=o>=</span> <span class=p>[</span><span class=s1>&#39;Rooms&#39;</span><span class=p>,</span> <span class=s1>&#39;Bathroom&#39;</span><span class=p>,</span> <span class=s1>&#39;Landsize&#39;</span><span class=p>,</span> <span class=s1>&#39;Lattitude&#39;</span><span class=p>,</span> <span class=s1>&#39;Longtitude&#39;</span><span class=p>]</span>
 <span class=n>X</span> <span class=o>=</span> <span class=n>home_data</span><span class=p>[</span><span class=n>home_features</span><span class=p>]</span>
 
-</code></pre></div><h4 id=steps-to-build-and-use-the-model>Steps to build and use the model</h4><ul><li>Define: what type of model will it be? Decision tree, etc.</li><li>Fit: capture patterns from provided data. Heart of modeling.</li><li>Predict</li><li>Evaluate: determine the accuracy of the model&rsquo;s predition.</li></ul><p>An example of degining a decision tree model with scikit-learn and fitting it with the features and target variable.
-Machine learning models here allow some randomness in model training <code>random_state</code></p><div class=highlight><pre class=chroma><code class=language-Python data-lang=Python><span class=kn>from</span> <span class=nn>sklearn.tree</span> <span class=kn>import</span> <span class=n>DecisionTreeRegressor</span>
+</code></pre></div><h4 id=steps-to-build-and-use-the-model>Steps to build and use the model</h4>
+<ul>
+<li>Define: what type of model will it be? Decision tree, etc.</li>
+<li>Fit: capture patterns from provided data. Heart of modeling.</li>
+<li>Predict</li>
+<li>Evaluate: determine the accuracy of the model&rsquo;s predition.</li>
+</ul>
+<p>An example of degining a decision tree model with scikit-learn and fitting it with the features and target variable.
+Machine learning models here allow some randomness in model training <code>random_state</code></p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-Python data-lang=Python><span class=kn>from</span> <span class=nn>sklearn.tree</span> <span class=kn>import</span> <span class=n>DecisionTreeRegressor</span>
 
 <span class=c1># Define model. Specify a number for random_state to ensure same results each run</span>
 <span class=n>home_model</span> <span class=o>=</span> <span class=n>DecisionTreeRegressor</span><span class=p>(</span><span class=n>random_state</span><span class=o>=</span><span class=mi>1</span><span class=p>)</span>
@@ -36,19 +109,24 @@ Machine learning models here allow some randomness in model training <code>rando
 <span class=c1># Fit model</span>
 <span class=n>home_model</span><span class=o>.</span><span class=n>fit</span><span class=p>(</span><span class=n>X</span><span class=p>,</span> <span class=n>y</span><span class=p>)</span>
 
-<span class=k>print</span><span class=p>(</span><span class=s2>&#34;Making predictions for the following 5 houses:&#34;</span><span class=p>)</span>
-<span class=k>print</span><span class=p>(</span><span class=n>X</span><span class=o>.</span><span class=n>head</span><span class=p>())</span>
-<span class=k>print</span><span class=p>(</span><span class=s2>&#34;The predictions are&#34;</span><span class=p>)</span>
-<span class=k>print</span><span class=p>(</span><span class=n>home_model</span><span class=o>.</span><span class=n>predict</span><span class=p>(</span><span class=n>X</span><span class=o>.</span><span class=n>head</span><span class=p>()))</span>
-</code></pre></div><h3 id=model-validation>Model Validation</h3><p>The relevant measure of model quality is predictive accutacy. The prediction error for each data is:</p><div class=highlight><pre class=chroma><code class=language-fallback data-lang=fallback>error = actual - predicted
-</code></pre></div><p><strong>Mean Absolute Error (MAE)</strong>: absolute value of each error. On average, our predictions are off by about X</p><div class=highlight><pre class=chroma><code class=language-Python data-lang=Python><span class=kn>from</span> <span class=nn>sklearn.metrics</span> <span class=kn>import</span> <span class=n>mean_absolute_error</span>
+<span class=nb>print</span><span class=p>(</span><span class=s2>&#34;Making predictions for the following 5 houses:&#34;</span><span class=p>)</span>
+<span class=nb>print</span><span class=p>(</span><span class=n>X</span><span class=o>.</span><span class=n>head</span><span class=p>())</span>
+<span class=nb>print</span><span class=p>(</span><span class=s2>&#34;The predictions are&#34;</span><span class=p>)</span>
+<span class=nb>print</span><span class=p>(</span><span class=n>home_model</span><span class=o>.</span><span class=n>predict</span><span class=p>(</span><span class=n>X</span><span class=o>.</span><span class=n>head</span><span class=p>()))</span>
+</code></pre></div><h3 id=model-validation>Model Validation</h3>
+<p>The relevant measure of model quality is predictive accutacy. The prediction error for each data is:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>error = actual - predicted
+</code></pre></div><p><strong>Mean Absolute Error (MAE)</strong>: absolute value of each error. On average, our predictions are off by about X</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-Python data-lang=Python><span class=kn>from</span> <span class=nn>sklearn.metrics</span> <span class=kn>import</span> <span class=n>mean_absolute_error</span>
 
 <span class=n>predicted_home_prices</span> <span class=o>=</span> <span class=n>home_model</span><span class=o>.</span><span class=n>predict</span><span class=p>(</span><span class=n>X</span><span class=p>)</span>
 <span class=n>mean_absolute_error</span><span class=p>(</span><span class=n>y</span><span class=p>,</span> <span class=n>predicted_home_prices</span><span class=p>)</span>
 </code></pre></div><p>Problem with <em>In-sample score</em>: we used a single &ldquo;sample&rdquo; of houses for both building the model and evaluating it.
 Since the pattern was derived from the training data, the model will appear accurate in the training data. However, if the pattern doesn&rsquo;t
-hold when the model sees new data, the model would be very inaccurate when used in practice.</p><p>Solution - <strong>validation data</strong>: since model&rsquo;s practical value come form making predictions on new data, we measure performance on data that wasn&rsquo;t used to build the model.
-The most straightforward way to do this is to exclude some data from the model-building process and then use those to test the model&rsquo;s accuracy on data it hasn&rsquo;t seen before.</p><div class=highlight><pre class=chroma><code class=language-Python data-lang=Python><span class=kn>from</span> <span class=nn>sklearn.model_selection</span> <span class=kn>import</span> <span class=n>train_test_split</span>
+hold when the model sees new data, the model would be very inaccurate when used in practice.</p>
+<p>Solution - <strong>validation data</strong>: since model&rsquo;s practical value come form making predictions on new data, we measure performance on data that wasn&rsquo;t used to build the model.
+The most straightforward way to do this is to exclude some data from the model-building process and then use those to test the model&rsquo;s accuracy on data it hasn&rsquo;t seen before.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-Python data-lang=Python><span class=kn>from</span> <span class=nn>sklearn.model_selection</span> <span class=kn>import</span> <span class=n>train_test_split</span>
 
 <span class=c1># split data into training and validation data, for both features and target</span>
 <span class=c1># The split is based on a random number generator. Supplying a numeric value to</span>
@@ -62,19 +140,32 @@ The most straightforward way to do this is to exclude some data from the model-b
 
 <span class=c1># get predicted prices on validation data</span>
 <span class=n>val_predictions</span> <span class=o>=</span> <span class=n>home_model</span><span class=o>.</span><span class=n>predict</span><span class=p>(</span><span class=n>val_X</span><span class=p>)</span>
-<span class=k>print</span><span class=p>(</span><span class=n>mean_absolute_error</span><span class=p>(</span><span class=n>val_y</span><span class=p>,</span> <span class=n>val_predictions</span><span class=p>))</span>
-</code></pre></div><h3 id=underfting-and-overfitting>Underfting and Overfitting</h3><p><strong>Overfitting</strong>: capturing spurious patterns that won&rsquo;t recur in the future, leading to less accurate predictions.</p><p>The model matches the training data almost perfectly, but does poorly in validation and other new data.
+<span class=nb>print</span><span class=p>(</span><span class=n>mean_absolute_error</span><span class=p>(</span><span class=n>val_y</span><span class=p>,</span> <span class=n>val_predictions</span><span class=p>))</span>
+</code></pre></div><h3 id=underfting-and-overfitting>Underfting and Overfitting</h3>
+<p><strong>Overfitting</strong>: capturing spurious patterns that won&rsquo;t recur in the future, leading to less accurate predictions.</p>
+<p>The model matches the training data almost perfectly, but does poorly in validation and other new data.
 Data is divided amongst many leaves with fewer data samples.
 Leaves with very few data samples will make preditions that are quite close to those sample&rsquo;s actual predicted values.
-However, they may make very unreliable predictions for new data.</p><p><strong>Unverfitting</strong>: failing to capture relevant patterns, again leading to less accurate predictions.</p><p>The model fails to capture important distinctions and patterns in the data, so it performs poorly even in training data.</p><p><img src=https://livian1107.github.io/blog/images/underoverfitting.png alt="Underfitting Overfitting"></p><h3 id=random-forests>Random Forests</h3><p>The random forest uses many trees, and it makes a prediction by averaging the predictions of each component tree. It generally has
-much better predictive accuracy than a single decision tree and it works well with default parameters.</p><div class=highlight><pre class=chroma><code class=language-Python data-lang=Python><span class=kn>from</span> <span class=nn>sklearn.ensemble</span> <span class=kn>import</span> <span class=n>RandomForestRegressor</span>
+However, they may make very unreliable predictions for new data.</p>
+<p><strong>Unverfitting</strong>: failing to capture relevant patterns, again leading to less accurate predictions.</p>
+<p>The model fails to capture important distinctions and patterns in the data, so it performs poorly even in training data.</p>
+<p><img src=https://livian1107.github.io/blog/images/underoverfitting.png alt="Underfitting Overfitting"></p>
+<h3 id=random-forests>Random Forests</h3>
+<p>The random forest uses many trees, and it makes a prediction by averaging the predictions of each component tree. It generally has
+much better predictive accuracy than a single decision tree and it works well with default parameters.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-Python data-lang=Python><span class=kn>from</span> <span class=nn>sklearn.ensemble</span> <span class=kn>import</span> <span class=n>RandomForestRegressor</span>
 <span class=kn>from</span> <span class=nn>sklearn.metrics</span> <span class=kn>import</span> <span class=n>mean_absolute_error</span>
 
 <span class=n>forest_model</span> <span class=o>=</span> <span class=n>RandomForestRegressor</span><span class=p>(</span><span class=n>random_state</span><span class=o>=</span><span class=mi>1</span><span class=p>)</span>
 <span class=n>forest_model</span><span class=o>.</span><span class=n>fit</span><span class=p>(</span><span class=n>train_X</span><span class=p>,</span> <span class=n>train_y</span><span class=p>)</span>
 <span class=n>melb_preds</span> <span class=o>=</span> <span class=n>forest_model</span><span class=o>.</span><span class=n>predict</span><span class=p>(</span><span class=n>val_X</span><span class=p>)</span>
-<span class=k>print</span><span class=p>(</span><span class=n>mean_absolute_error</span><span class=p>(</span><span class=n>val_y</span><span class=p>,</span> <span class=n>melb_preds</span><span class=p>))</span>
-</code></pre></div><h3 id=data-cleaning>Data Cleaning</h3><h4 id=missing-values>Missing Values</h4><ol><li>Drop columns with missing values</li></ol><div class=highlight><pre class=chroma><code class=language-Python data-lang=Python><span class=c1># Get names of columns with missing values</span>
+<span class=nb>print</span><span class=p>(</span><span class=n>mean_absolute_error</span><span class=p>(</span><span class=n>val_y</span><span class=p>,</span> <span class=n>melb_preds</span><span class=p>))</span>
+</code></pre></div><h3 id=data-cleaning>Data Cleaning</h3>
+<h4 id=missing-values>Missing Values</h4>
+<ol>
+<li>Drop columns with missing values</li>
+</ol>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-Python data-lang=Python><span class=c1># Get names of columns with missing values</span>
 <span class=n>cols_with_missing</span> <span class=o>=</span> <span class=p>[</span><span class=n>col</span> <span class=k>for</span> <span class=n>col</span> <span class=ow>in</span> <span class=n>X_train</span><span class=o>.</span><span class=n>columns</span>
                      <span class=k>if</span> <span class=n>X_train</span><span class=p>[</span><span class=n>col</span><span class=p>]</span><span class=o>.</span><span class=n>isnull</span><span class=p>()</span><span class=o>.</span><span class=n>any</span><span class=p>()]</span>
 
@@ -82,9 +173,12 @@ much better predictive accuracy than a single decision tree and it works well wi
 <span class=n>reduced_X_train</span> <span class=o>=</span> <span class=n>X_train</span><span class=o>.</span><span class=n>drop</span><span class=p>(</span><span class=n>cols_with_missing</span><span class=p>,</span> <span class=n>axis</span><span class=o>=</span><span class=mi>1</span><span class=p>)</span>
 <span class=n>reduced_X_valid</span> <span class=o>=</span> <span class=n>X_valid</span><span class=o>.</span><span class=n>drop</span><span class=p>(</span><span class=n>cols_with_missing</span><span class=p>,</span> <span class=n>axis</span><span class=o>=</span><span class=mi>1</span><span class=p>)</span>
 
-<span class=k>print</span><span class=p>(</span><span class=s2>&#34;MAE from Approach 1 (Drop columns with missing values):&#34;</span><span class=p>)</span>
-<span class=k>print</span><span class=p>(</span><span class=n>score_dataset</span><span class=p>(</span><span class=n>reduced_X_train</span><span class=p>,</span> <span class=n>reduced_X_valid</span><span class=p>,</span> <span class=n>y_train</span><span class=p>,</span> <span class=n>y_valid</span><span class=p>))</span>
-</code></pre></div><ol start=2><li>Imputation: fills in the missing values with some number.</li></ol><div class=highlight><pre class=chroma><code class=language-Python data-lang=Python><span class=kn>from</span> <span class=nn>sklearn.impute</span> <span class=kn>import</span> <span class=n>SimpleImputer</span>
+<span class=nb>print</span><span class=p>(</span><span class=s2>&#34;MAE from Approach 1 (Drop columns with missing values):&#34;</span><span class=p>)</span>
+<span class=nb>print</span><span class=p>(</span><span class=n>score_dataset</span><span class=p>(</span><span class=n>reduced_X_train</span><span class=p>,</span> <span class=n>reduced_X_valid</span><span class=p>,</span> <span class=n>y_train</span><span class=p>,</span> <span class=n>y_valid</span><span class=p>))</span>
+</code></pre></div><ol start=2>
+<li>Imputation: fills in the missing values with some number.</li>
+</ol>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-Python data-lang=Python><span class=kn>from</span> <span class=nn>sklearn.impute</span> <span class=kn>import</span> <span class=n>SimpleImputer</span>
 
 <span class=c1># Imputation</span>
 <span class=n>my_imputer</span> <span class=o>=</span> <span class=n>SimpleImputer</span><span class=p>()</span>
@@ -95,9 +189,12 @@ much better predictive accuracy than a single decision tree and it works well wi
 <span class=n>imputed_X_train</span><span class=o>.</span><span class=n>columns</span> <span class=o>=</span> <span class=n>X_train</span><span class=o>.</span><span class=n>columns</span>
 <span class=n>imputed_X_valid</span><span class=o>.</span><span class=n>columns</span> <span class=o>=</span> <span class=n>X_valid</span><span class=o>.</span><span class=n>columns</span>
 
-<span class=k>print</span><span class=p>(</span><span class=s2>&#34;MAE from Approach 2 (Imputation):&#34;</span><span class=p>)</span>
-<span class=k>print</span><span class=p>(</span><span class=n>score_dataset</span><span class=p>(</span><span class=n>imputed_X_train</span><span class=p>,</span> <span class=n>imputed_X_valid</span><span class=p>,</span> <span class=n>y_train</span><span class=p>,</span> <span class=n>y_valid</span><span class=p>))</span>
-</code></pre></div><ol start=3><li>An extension to imputation: based on imputation, add indication on which values were originally missing.</li></ol><div class=highlight><pre class=chroma><code class=language-Python data-lang=Python><span class=c1># Make copy to avoid changing original data (when imputing)</span>
+<span class=nb>print</span><span class=p>(</span><span class=s2>&#34;MAE from Approach 2 (Imputation):&#34;</span><span class=p>)</span>
+<span class=nb>print</span><span class=p>(</span><span class=n>score_dataset</span><span class=p>(</span><span class=n>imputed_X_train</span><span class=p>,</span> <span class=n>imputed_X_valid</span><span class=p>,</span> <span class=n>y_train</span><span class=p>,</span> <span class=n>y_valid</span><span class=p>))</span>
+</code></pre></div><ol start=3>
+<li>An extension to imputation: based on imputation, add indication on which values were originally missing.</li>
+</ol>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-Python data-lang=Python><span class=c1># Make copy to avoid changing original data (when imputing)</span>
 <span class=n>X_train_plus</span> <span class=o>=</span> <span class=n>X_train</span><span class=o>.</span><span class=n>copy</span><span class=p>()</span>
 <span class=n>X_valid_plus</span> <span class=o>=</span> <span class=n>X_valid</span><span class=o>.</span><span class=n>copy</span><span class=p>()</span>
 
@@ -115,21 +212,28 @@ much better predictive accuracy than a single decision tree and it works well wi
 <span class=n>imputed_X_train_plus</span><span class=o>.</span><span class=n>columns</span> <span class=o>=</span> <span class=n>X_train_plus</span><span class=o>.</span><span class=n>columns</span>
 <span class=n>imputed_X_valid_plus</span><span class=o>.</span><span class=n>columns</span> <span class=o>=</span> <span class=n>X_valid_plus</span><span class=o>.</span><span class=n>columns</span>
 
-<span class=k>print</span><span class=p>(</span><span class=s2>&#34;MAE from Approach 3 (An Extension to Imputation):&#34;</span><span class=p>)</span>
-<span class=k>print</span><span class=p>(</span><span class=n>score_dataset</span><span class=p>(</span><span class=n>imputed_X_train_plus</span><span class=p>,</span> <span class=n>imputed_X_valid_plus</span><span class=p>,</span> <span class=n>y_train</span><span class=p>,</span> <span class=n>y_valid</span><span class=p>))</span>
-</code></pre></div><h4 id=categotical-variables>Categotical Variables</h4><ol><li>Drop categorical variables</li></ol><div class=highlight><pre class=chroma><code class=language-Python data-lang=Python><span class=c1># Get list of categorical variables</span>
+<span class=nb>print</span><span class=p>(</span><span class=s2>&#34;MAE from Approach 3 (An Extension to Imputation):&#34;</span><span class=p>)</span>
+<span class=nb>print</span><span class=p>(</span><span class=n>score_dataset</span><span class=p>(</span><span class=n>imputed_X_train_plus</span><span class=p>,</span> <span class=n>imputed_X_valid_plus</span><span class=p>,</span> <span class=n>y_train</span><span class=p>,</span> <span class=n>y_valid</span><span class=p>))</span>
+</code></pre></div><h4 id=categotical-variables>Categotical Variables</h4>
+<ol>
+<li>Drop categorical variables</li>
+</ol>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-Python data-lang=Python><span class=c1># Get list of categorical variables</span>
 <span class=n>s</span> <span class=o>=</span> <span class=p>(</span><span class=n>X_train</span><span class=o>.</span><span class=n>dtypes</span> <span class=o>==</span> <span class=s1>&#39;object&#39;</span><span class=p>)</span>
 <span class=n>object_cols</span> <span class=o>=</span> <span class=nb>list</span><span class=p>(</span><span class=n>s</span><span class=p>[</span><span class=n>s</span><span class=p>]</span><span class=o>.</span><span class=n>index</span><span class=p>)</span>
 
-<span class=k>print</span><span class=p>(</span><span class=s2>&#34;Categorical variables:&#34;</span><span class=p>)</span>
-<span class=k>print</span><span class=p>(</span><span class=n>object_cols</span><span class=p>)</span>
+<span class=nb>print</span><span class=p>(</span><span class=s2>&#34;Categorical variables:&#34;</span><span class=p>)</span>
+<span class=nb>print</span><span class=p>(</span><span class=n>object_cols</span><span class=p>)</span>
 
 <span class=n>drop_X_train</span> <span class=o>=</span> <span class=n>X_train</span><span class=o>.</span><span class=n>select_dtypes</span><span class=p>(</span><span class=n>exclude</span><span class=o>=</span><span class=p>[</span><span class=s1>&#39;object&#39;</span><span class=p>])</span>
 <span class=n>drop_X_valid</span> <span class=o>=</span> <span class=n>X_valid</span><span class=o>.</span><span class=n>select_dtypes</span><span class=p>(</span><span class=n>exclude</span><span class=o>=</span><span class=p>[</span><span class=s1>&#39;object&#39;</span><span class=p>])</span>
 
-<span class=k>print</span><span class=p>(</span><span class=s2>&#34;MAE from Approach 1 (Drop categorical variables):&#34;</span><span class=p>)</span>
-<span class=k>print</span><span class=p>(</span><span class=n>score_dataset</span><span class=p>(</span><span class=n>drop_X_train</span><span class=p>,</span> <span class=n>drop_X_valid</span><span class=p>,</span> <span class=n>y_train</span><span class=p>,</span> <span class=n>y_valid</span><span class=p>))</span>
-</code></pre></div><ol start=2><li>Label encoding: assign each unique value to a different integer.</li></ol><div class=highlight><pre class=chroma><code class=language-Python data-lang=Python><span class=kn>from</span> <span class=nn>sklearn.preprocessing</span> <span class=kn>import</span> <span class=n>LabelEncoder</span>
+<span class=nb>print</span><span class=p>(</span><span class=s2>&#34;MAE from Approach 1 (Drop categorical variables):&#34;</span><span class=p>)</span>
+<span class=nb>print</span><span class=p>(</span><span class=n>score_dataset</span><span class=p>(</span><span class=n>drop_X_train</span><span class=p>,</span> <span class=n>drop_X_valid</span><span class=p>,</span> <span class=n>y_train</span><span class=p>,</span> <span class=n>y_valid</span><span class=p>))</span>
+</code></pre></div><ol start=2>
+<li>Label encoding: assign each unique value to a different integer.</li>
+</ol>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-Python data-lang=Python><span class=kn>from</span> <span class=nn>sklearn.preprocessing</span> <span class=kn>import</span> <span class=n>LabelEncoder</span>
 
 <span class=c1># Make copy to avoid changing original data </span>
 <span class=n>label_X_train</span> <span class=o>=</span> <span class=n>X_train</span><span class=o>.</span><span class=n>copy</span><span class=p>()</span>
@@ -141,14 +245,17 @@ much better predictive accuracy than a single decision tree and it works well wi
     <span class=n>label_X_train</span><span class=p>[</span><span class=n>col</span><span class=p>]</span> <span class=o>=</span> <span class=n>label_encoder</span><span class=o>.</span><span class=n>fit_transform</span><span class=p>(</span><span class=n>X_train</span><span class=p>[</span><span class=n>col</span><span class=p>])</span>
     <span class=n>label_X_valid</span><span class=p>[</span><span class=n>col</span><span class=p>]</span> <span class=o>=</span> <span class=n>label_encoder</span><span class=o>.</span><span class=n>transform</span><span class=p>(</span><span class=n>X_valid</span><span class=p>[</span><span class=n>col</span><span class=p>])</span>
 
-<span class=k>print</span><span class=p>(</span><span class=s2>&#34;MAE from Approach 2 (Label Encoding):&#34;</span><span class=p>)</span> 
-<span class=k>print</span><span class=p>(</span><span class=n>score_dataset</span><span class=p>(</span><span class=n>label_X_train</span><span class=p>,</span> <span class=n>label_X_valid</span><span class=p>,</span> <span class=n>y_train</span><span class=p>,</span> <span class=n>y_valid</span><span class=p>))</span>
-</code></pre></div><ol start=3><li>One-Hot encoding: in contrast to label encoding, it does not assume an ordering of the categories.
+<span class=nb>print</span><span class=p>(</span><span class=s2>&#34;MAE from Approach 2 (Label Encoding):&#34;</span><span class=p>)</span> 
+<span class=nb>print</span><span class=p>(</span><span class=n>score_dataset</span><span class=p>(</span><span class=n>label_X_train</span><span class=p>,</span> <span class=n>label_X_valid</span><span class=p>,</span> <span class=n>y_train</span><span class=p>,</span> <span class=n>y_valid</span><span class=p>))</span>
+</code></pre></div><ol start=3>
+<li>One-Hot encoding: in contrast to label encoding, it does not assume an ordering of the categories.
 This is expected to work well if there is no clear ordering in the categorical data. Categorical variables are referred as nominal
-variables without an intrinsic ranking.</li></ol><div class=highlight><pre class=chroma><code class=language-Python data-lang=Python><span class=kn>from</span> <span class=nn>sklearn.preprocessing</span> <span class=kn>import</span> <span class=n>OneHotEncoder</span>
+variables without an intrinsic ranking.</li>
+</ol>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-Python data-lang=Python><span class=kn>from</span> <span class=nn>sklearn.preprocessing</span> <span class=kn>import</span> <span class=n>OneHotEncoder</span>
 
 <span class=c1># Apply one-hot encoder to each column with categorical data</span>
-<span class=n>OH_encoder</span> <span class=o>=</span> <span class=n>OneHotEncoder</span><span class=p>(</span><span class=n>handle_unknown</span><span class=o>=</span><span class=s1>&#39;ignore&#39;</span><span class=p>,</span> <span class=n>sparse</span><span class=o>=</span><span class=bp>False</span><span class=p>)</span>
+<span class=n>OH_encoder</span> <span class=o>=</span> <span class=n>OneHotEncoder</span><span class=p>(</span><span class=n>handle_unknown</span><span class=o>=</span><span class=s1>&#39;ignore&#39;</span><span class=p>,</span> <span class=n>sparse</span><span class=o>=</span><span class=kc>False</span><span class=p>)</span>
 <span class=n>OH_cols_train</span> <span class=o>=</span> <span class=n>pd</span><span class=o>.</span><span class=n>DataFrame</span><span class=p>(</span><span class=n>OH_encoder</span><span class=o>.</span><span class=n>fit_transform</span><span class=p>(</span><span class=n>X_train</span><span class=p>[</span><span class=n>object_cols</span><span class=p>]))</span>
 <span class=n>OH_cols_valid</span> <span class=o>=</span> <span class=n>pd</span><span class=o>.</span><span class=n>DataFrame</span><span class=p>(</span><span class=n>OH_encoder</span><span class=o>.</span><span class=n>transform</span><span class=p>(</span><span class=n>X_valid</span><span class=p>[</span><span class=n>object_cols</span><span class=p>]))</span>
 
@@ -164,9 +271,26 @@ variables without an intrinsic ranking.</li></ol><div class=highlight><pre class
 <span class=n>OH_X_train</span> <span class=o>=</span> <span class=n>pd</span><span class=o>.</span><span class=n>concat</span><span class=p>([</span><span class=n>num_X_train</span><span class=p>,</span> <span class=n>OH_cols_train</span><span class=p>],</span> <span class=n>axis</span><span class=o>=</span><span class=mi>1</span><span class=p>)</span>
 <span class=n>OH_X_valid</span> <span class=o>=</span> <span class=n>pd</span><span class=o>.</span><span class=n>concat</span><span class=p>([</span><span class=n>num_X_valid</span><span class=p>,</span> <span class=n>OH_cols_valid</span><span class=p>],</span> <span class=n>axis</span><span class=o>=</span><span class=mi>1</span><span class=p>)</span>
 
-<span class=k>print</span><span class=p>(</span><span class=s2>&#34;MAE from Approach 3 (One-Hot Encoding):&#34;</span><span class=p>)</span> 
-<span class=k>print</span><span class=p>(</span><span class=n>score_dataset</span><span class=p>(</span><span class=n>OH_X_train</span><span class=p>,</span> <span class=n>OH_X_valid</span><span class=p>,</span> <span class=n>y_train</span><span class=p>,</span> <span class=n>y_valid</span><span class=p>))</span>
-</code></pre></div><h3 id=pipelines>Pipelines</h3><p>Pipelines are a simple way to keep data preprocessing and modeling code organized.</p><p>Benefits:</p><ol><li>Cleaner code</li><li>Fewer bugs</li><li>Easier to productionize</li><li>More options for model validation</li></ol><p>Steps:</p><ol><li>Define preprocessing steps:</li></ol><ul><li>imputes missing values in numerical data</li><li>imputed missing values and applies a one-hot encoding to categotical data</li></ul><div class=highlight><pre class=chroma><code class=language-Python data-lang=Python><span class=kn>from</span> <span class=nn>sklearn.compose</span> <span class=kn>import</span> <span class=n>ColumnTransformer</span>
+<span class=nb>print</span><span class=p>(</span><span class=s2>&#34;MAE from Approach 3 (One-Hot Encoding):&#34;</span><span class=p>)</span> 
+<span class=nb>print</span><span class=p>(</span><span class=n>score_dataset</span><span class=p>(</span><span class=n>OH_X_train</span><span class=p>,</span> <span class=n>OH_X_valid</span><span class=p>,</span> <span class=n>y_train</span><span class=p>,</span> <span class=n>y_valid</span><span class=p>))</span>
+</code></pre></div><h3 id=pipelines>Pipelines</h3>
+<p>Pipelines are a simple way to keep data preprocessing and modeling code organized.</p>
+<p>Benefits:</p>
+<ol>
+<li>Cleaner code</li>
+<li>Fewer bugs</li>
+<li>Easier to productionize</li>
+<li>More options for model validation</li>
+</ol>
+<p>Steps:</p>
+<ol>
+<li>Define preprocessing steps:</li>
+</ol>
+<ul>
+<li>imputes missing values in numerical data</li>
+<li>imputed missing values and applies a one-hot encoding to categotical data</li>
+</ul>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-Python data-lang=Python><span class=kn>from</span> <span class=nn>sklearn.compose</span> <span class=kn>import</span> <span class=n>ColumnTransformer</span>
 <span class=kn>from</span> <span class=nn>sklearn.pipeline</span> <span class=kn>import</span> <span class=n>Pipeline</span>
 <span class=kn>from</span> <span class=nn>sklearn.impute</span> <span class=kn>import</span> <span class=n>SimpleImputer</span>
 <span class=kn>from</span> <span class=nn>sklearn.preprocessing</span> <span class=kn>import</span> <span class=n>OneHotEncoder</span>
@@ -187,10 +311,16 @@ variables without an intrinsic ranking.</li></ol><div class=highlight><pre class
         <span class=p>(</span><span class=s1>&#39;cat&#39;</span><span class=p>,</span> <span class=n>categorical_transformer</span><span class=p>,</span> <span class=n>categorical_cols</span><span class=p>)</span>
     <span class=p>])</span>
 
-</code></pre></div><ol start=2><li>Define the model</li></ol><div class=highlight><pre class=chroma><code class=language-Python data-lang=Python><span class=kn>from</span> <span class=nn>sklearn.ensemble</span> <span class=kn>import</span> <span class=n>RandomForestRegressor</span>
+</code></pre></div><ol start=2>
+<li>Define the model</li>
+</ol>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-Python data-lang=Python><span class=kn>from</span> <span class=nn>sklearn.ensemble</span> <span class=kn>import</span> <span class=n>RandomForestRegressor</span>
 
 <span class=n>model</span> <span class=o>=</span> <span class=n>RandomForestRegressor</span><span class=p>(</span><span class=n>n_estimators</span><span class=o>=</span><span class=mi>100</span><span class=p>,</span> <span class=n>random_state</span><span class=o>=</span><span class=mi>0</span><span class=p>)</span>
-</code></pre></div><ol start=3><li>Create and evaluate the pipeline</li></ol><div class=highlight><pre class=chroma><code class=language-Python data-lang=Python><span class=kn>from</span> <span class=nn>sklearn.metrics</span> <span class=kn>import</span> <span class=n>mean_absolute_error</span>
+</code></pre></div><ol start=3>
+<li>Create and evaluate the pipeline</li>
+</ol>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-Python data-lang=Python><span class=kn>from</span> <span class=nn>sklearn.metrics</span> <span class=kn>import</span> <span class=n>mean_absolute_error</span>
 
 <span class=c1># Bundle preprocessing and modeling code in a pipeline</span>
 <span class=n>my_pipeline</span> <span class=o>=</span> <span class=n>Pipeline</span><span class=p>(</span><span class=n>steps</span><span class=o>=</span><span class=p>[(</span><span class=s1>&#39;preprocessor&#39;</span><span class=p>,</span> <span class=n>preprocessor</span><span class=p>),</span>
@@ -205,10 +335,18 @@ variables without an intrinsic ranking.</li></ol><div class=highlight><pre class
 
 <span class=c1># Evaluate the model</span>
 <span class=n>score</span> <span class=o>=</span> <span class=n>mean_absolute_error</span><span class=p>(</span><span class=n>y_valid</span><span class=p>,</span> <span class=n>preds</span><span class=p>)</span>
-<span class=k>print</span><span class=p>(</span><span class=s1>&#39;MAE:&#39;</span><span class=p>,</span> <span class=n>score</span><span class=p>)</span>
-</code></pre></div><h3 id=cross-validation>Cross-Validation</h3><p>Run modeling process on different subsets of the data to get multiple measures of model quality.</p><p>Cross-validation gives a more accurate measure of model quality, which is especially important if in need
-to make a lot of modeling decisions.</p><p>Therefore:</p><ul><li>For small datasets, where extra computational burden isn&rsquo;t a big deal, run cross-validation</li><li>For larger datasets, a single validation set is sufficient. Code will run faster, and there is enough data that there&rsquo;s little
-need to re-use some of it for holdout.</li></ul><div class=highlight><pre class=chroma><code class=language-Python data-lang=Python><span class=kn>from</span> <span class=nn>sklearn.ensemble</span> <span class=kn>import</span> <span class=n>RandomForestRegressor</span>
+<span class=nb>print</span><span class=p>(</span><span class=s1>&#39;MAE:&#39;</span><span class=p>,</span> <span class=n>score</span><span class=p>)</span>
+</code></pre></div><h3 id=cross-validation>Cross-Validation</h3>
+<p>Run modeling process on different subsets of the data to get multiple measures of model quality.</p>
+<p>Cross-validation gives a more accurate measure of model quality, which is especially important if in need
+to make a lot of modeling decisions.</p>
+<p>Therefore:</p>
+<ul>
+<li>For small datasets, where extra computational burden isn&rsquo;t a big deal, run cross-validation</li>
+<li>For larger datasets, a single validation set is sufficient. Code will run faster, and there is enough data that there&rsquo;s little
+need to re-use some of it for holdout.</li>
+</ul>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-Python data-lang=Python><span class=kn>from</span> <span class=nn>sklearn.ensemble</span> <span class=kn>import</span> <span class=n>RandomForestRegressor</span>
 <span class=kn>from</span> <span class=nn>sklearn.pipeline</span> <span class=kn>import</span> <span class=n>Pipeline</span>
 <span class=kn>from</span> <span class=nn>sklearn.impute</span> <span class=kn>import</span> <span class=n>SimpleImputer</span>
 
@@ -224,24 +362,38 @@ need to re-use some of it for holdout.</li></ul><div class=highlight><pre class=
                               <span class=n>cv</span><span class=o>=</span><span class=mi>5</span><span class=p>,</span>
                               <span class=n>scoring</span><span class=o>=</span><span class=s1>&#39;neg_mean_absolute_error&#39;</span><span class=p>)</span>
 
-<span class=k>print</span><span class=p>(</span><span class=s2>&#34;MAE scores:</span><span class=se>\n</span><span class=s2>&#34;</span><span class=p>,</span> <span class=n>scores</span><span class=p>)</span>
-</code></pre></div><h3 id=xgboost>XGBoost</h3><p>Gradient boosting goes through cycles to iteratively add models into an ensemble. It begins
-by initializing the enselmble with a single model with naive prediction. Then we start the cycle:</p><ol><li>Use the current ensemble to generate predictions for each observation in the dataset.</li><li>These predictions are used to calculate a loss function.</li><li>Use loss function to fit a new model that will be added to the ensemblbe.</li><li>Finally, add the new model to ensemble.</li></ol><div class=highlight><pre class=chroma><code class=language-Python data-lang=Python><span class=kn>from</span> <span class=nn>xgboost</span> <span class=kn>import</span> <span class=n>XGBRegressor</span>
+<span class=nb>print</span><span class=p>(</span><span class=s2>&#34;MAE scores:</span><span class=se>\n</span><span class=s2>&#34;</span><span class=p>,</span> <span class=n>scores</span><span class=p>)</span>
+</code></pre></div><h3 id=xgboost>XGBoost</h3>
+<p>Gradient boosting goes through cycles to iteratively add models into an ensemble. It begins
+by initializing the enselmble with a single model with naive prediction. Then we start the cycle:</p>
+<ol>
+<li>Use the current ensemble to generate predictions for each observation in the dataset.</li>
+<li>These predictions are used to calculate a loss function.</li>
+<li>Use loss function to fit a new model that will be added to the ensemblbe.</li>
+<li>Finally, add the new model to ensemble.</li>
+</ol>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-Python data-lang=Python><span class=kn>from</span> <span class=nn>xgboost</span> <span class=kn>import</span> <span class=n>XGBRegressor</span>
 
 <span class=n>my_model</span> <span class=o>=</span> <span class=n>XGBRegressor</span><span class=p>(</span><span class=n>n_estimators</span><span class=o>=</span><span class=mi>500</span><span class=p>,</span> <span class=n>learning_rate</span><span class=o>=</span><span class=mf>0.05</span><span class=p>,</span> <span class=n>n_jobs</span><span class=o>=</span><span class=mi>4</span><span class=p>))</span>
 <span class=n>my_model</span><span class=o>.</span><span class=n>fit</span><span class=p>(</span><span class=n>X_train</span><span class=p>,</span> <span class=n>y_train</span><span class=p>,</span>
             <span class=n>early_stopping_rounds</span><span class=o>=</span><span class=mi>5</span><span class=p>,</span> 
             <span class=n>eval_set</span><span class=o>=</span><span class=p>[(</span><span class=n>X_valid</span><span class=p>,</span> <span class=n>y_valid</span><span class=p>)],</span>
-            <span class=n>verbose</span><span class=o>=</span><span class=bp>False</span><span class=p>)</span>
+            <span class=n>verbose</span><span class=o>=</span><span class=kc>False</span><span class=p>)</span>
 
 <span class=kn>from</span> <span class=nn>sklearn.metrics</span> <span class=kn>import</span> <span class=n>mean_absolute_error</span>
 
 <span class=n>predictions</span> <span class=o>=</span> <span class=n>my_model</span><span class=o>.</span><span class=n>predict</span><span class=p>(</span><span class=n>X_valid</span><span class=p>)</span>
-<span class=k>print</span><span class=p>(</span><span class=s2>&#34;Mean Absolute Error: &#34;</span> <span class=o>+</span> <span class=nb>str</span><span class=p>(</span><span class=n>mean_absolute_error</span><span class=p>(</span><span class=n>predictions</span><span class=p>,</span> <span class=n>y_valid</span><span class=p>)))</span>
+<span class=nb>print</span><span class=p>(</span><span class=s2>&#34;Mean Absolute Error: &#34;</span> <span class=o>+</span> <span class=nb>str</span><span class=p>(</span><span class=n>mean_absolute_error</span><span class=p>(</span><span class=n>predictions</span><span class=p>,</span> <span class=n>y_valid</span><span class=p>)))</span>
 
-</code></pre></div><h3 id=data-leakage>Data Leakage</h3><p>Data leakage happens when training data contains information about the target but similar data will not
+</code></pre></div><h3 id=data-leakage>Data Leakage</h3>
+<p>Data leakage happens when training data contains information about the target but similar data will not
 be available when the model is used for prediction. This lead to high performance on the training set, but the model
-will perform poorly in production.</p><ul><li>Target leakage: occurs when predictors include data that will not be available at the time making predictions.</li><li>Train-test contamination: occurs when not distinguish training data from validation data.</li></ul><div class=highlight><pre class=chroma><code class=language-Python data-lang=Python><span class=kn>from</span> <span class=nn>sklearn.pipeline</span> <span class=kn>import</span> <span class=n>make_pipeline</span>
+will perform poorly in production.</p>
+<ul>
+<li>Target leakage: occurs when predictors include data that will not be available at the time making predictions.</li>
+<li>Train-test contamination: occurs when not distinguish training data from validation data.</li>
+</ul>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-Python data-lang=Python><span class=kn>from</span> <span class=nn>sklearn.pipeline</span> <span class=kn>import</span> <span class=n>make_pipeline</span>
 <span class=kn>from</span> <span class=nn>sklearn.ensemble</span> <span class=kn>import</span> <span class=n>RandomForestClassifier</span>
 <span class=kn>from</span> <span class=nn>sklearn.model_selection</span> <span class=kn>import</span> <span class=n>cross_val_score</span>
 
@@ -251,14 +403,14 @@ will perform poorly in production.</p><ul><li>Target leakage: occurs when predic
                             <span class=n>cv</span><span class=o>=</span><span class=mi>5</span><span class=p>,</span>
                             <span class=n>scoring</span><span class=o>=</span><span class=s1>&#39;accuracy&#39;</span><span class=p>)</span>
 
-<span class=k>print</span><span class=p>(</span><span class=s2>&#34;Cross-validation accuracy: </span><span class=si>%f</span><span class=s2>&#34;</span> <span class=o>%</span> <span class=n>cv_scores</span><span class=o>.</span><span class=n>mean</span><span class=p>())</span>
+<span class=nb>print</span><span class=p>(</span><span class=s2>&#34;Cross-validation accuracy: </span><span class=si>%f</span><span class=s2>&#34;</span> <span class=o>%</span> <span class=n>cv_scores</span><span class=o>.</span><span class=n>mean</span><span class=p>())</span>
 
 <span class=n>expenditures_cardholders</span> <span class=o>=</span> <span class=n>X</span><span class=o>.</span><span class=n>expenditure</span><span class=p>[</span><span class=n>y</span><span class=p>]</span>
 <span class=n>expenditures_noncardholders</span> <span class=o>=</span> <span class=n>X</span><span class=o>.</span><span class=n>expenditure</span><span class=p>[</span><span class=o>~</span><span class=n>y</span><span class=p>]</span>
 
-<span class=k>print</span><span class=p>(</span><span class=s1>&#39;Fraction of those who did not receive a card and had no expenditures: </span><span class=si>%.2f</span><span class=s1>&#39;</span> \
+<span class=nb>print</span><span class=p>(</span><span class=s1>&#39;Fraction of those who did not receive a card and had no expenditures: </span><span class=si>%.2f</span><span class=s1>&#39;</span> \
       <span class=o>%</span><span class=p>((</span><span class=n>expenditures_noncardholders</span> <span class=o>==</span> <span class=mi>0</span><span class=p>)</span><span class=o>.</span><span class=n>mean</span><span class=p>()))</span>
-<span class=k>print</span><span class=p>(</span><span class=s1>&#39;Fraction of those who received a card and had no expenditures: </span><span class=si>%.2f</span><span class=s1>&#39;</span> \
+<span class=nb>print</span><span class=p>(</span><span class=s1>&#39;Fraction of those who received a card and had no expenditures: </span><span class=si>%.2f</span><span class=s1>&#39;</span> \
       <span class=o>%</span><span class=p>((</span> <span class=n>expenditures_cardholders</span> <span class=o>==</span> <span class=mi>0</span><span class=p>)</span><span class=o>.</span><span class=n>mean</span><span class=p>()))</span>
 
 <span class=c1># Drop leaky predictors from dataset</span>
@@ -270,5 +422,19 @@ will perform poorly in production.</p><ul><li>Target leakage: occurs when predic
                             <span class=n>cv</span><span class=o>=</span><span class=mi>5</span><span class=p>,</span>
                             <span class=n>scoring</span><span class=o>=</span><span class=s1>&#39;accuracy&#39;</span><span class=p>)</span>
 
-<span class=k>print</span><span class=p>(</span><span class=s2>&#34;Cross-val accuracy: </span><span class=si>%f</span><span class=s2>&#34;</span> <span class=o>%</span> <span class=n>cv_scores</span><span class=o>.</span><span class=n>mean</span><span class=p>())</span>
-</code></pre></div></div><div class=post-footer><div class=info><span class=separator><a class=tag href=/blog/tags/data-science/>Data Science</a></span></div></div></div></div></div></div><script type=text/javascript src=https://livian1107.github.io/blog/js/jquery.min.64d0083866906099f942140bc1c5cba4b1bf65783c52e4a63c5c46bf9dbc41f4.js integrity="sha256-ZNAIOGaQYJn5QhQLwcXLpLG/ZXg8UuSmPFxGv528QfQ=" crossorigin=anonymous></script><script type=text/javascript src=https://livian1107.github.io/blog/js/bundle.min.45159b0e20ba3878972e064b7edc464c31a9e35a0d0a6a71e3fec84efdbe2ea5.js integrity="sha256-RRWbDiC6OHiXLgZLftxGTDGp41oNCmpx4/7ITv2+LqU=" crossorigin=anonymous></script><script type=text/javascript src=https://livian1107.github.io/blog/js/medium-zoom.min.2d6fd0be87fa98f0c9b4dc2536b312bbca48757f584f6ea1f394abc9bcc38fbc.js integrity="sha256-LW/Qvof6mPDJtNwlNrMSu8pIdX9YT26h85SrybzDj7w=" crossorigin=anonymous></script></body></html>
+<span class=nb>print</span><span class=p>(</span><span class=s2>&#34;Cross-val accuracy: </span><span class=si>%f</span><span class=s2>&#34;</span> <span class=o>%</span> <span class=n>cv_scores</span><span class=o>.</span><span class=n>mean</span><span class=p>())</span>
+</code></pre></div></div>
+<div class=post-footer>
+<div class=info>
+<span class=separator><a class=tag href=/blog/tags/data-science/>Data Science</a></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type=text/javascript src=https://livian1107.github.io/blog/js/jquery.min.64d0083866906099f942140bc1c5cba4b1bf65783c52e4a63c5c46bf9dbc41f4.js integrity="sha256-ZNAIOGaQYJn5QhQLwcXLpLG/ZXg8UuSmPFxGv528QfQ=" crossorigin=anonymous></script>
+<script type=text/javascript src=https://livian1107.github.io/blog/js/bundle.min.45159b0e20ba3878972e064b7edc464c31a9e35a0d0a6a71e3fec84efdbe2ea5.js integrity="sha256-RRWbDiC6OHiXLgZLftxGTDGp41oNCmpx4/7ITv2+LqU=" crossorigin=anonymous></script>
+<script type=text/javascript src=https://livian1107.github.io/blog/js/medium-zoom.min.2d6fd0be87fa98f0c9b4dc2536b312bbca48757f584f6ea1f394abc9bcc38fbc.js integrity="sha256-LW/Qvof6mPDJtNwlNrMSu8pIdX9YT26h85SrybzDj7w=" crossorigin=anonymous></script>
+</body>
+</html>
