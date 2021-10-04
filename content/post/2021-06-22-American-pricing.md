@@ -27,3 +27,9 @@ Value: stopping time 随机变量
 if a random varible, e, satisfies {e<=t} for any t>=0
 Then e is a stopping time.
 
+frist hitting time - stock price drops to certain point, exercise the put
+
+Stopped process
+
+Theorem: a martingale, super martingale/sub-martingale stopped
+at a stopping time is a martingale

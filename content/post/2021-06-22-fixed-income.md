@@ -82,3 +82,65 @@ Summary:
 - As repayments to bondholders are fixed, inflation will corrode the purchasing power of fixed bond repayments, sending yields up.
 - As U.S. government bond yields serve as benchmarks for all inverments, yields on other bonds tend to move with them.
 
+### Fixed Income: Central Bankers and Interest Rates
+
+Summary:
+- Most central bank have a mandat to prevent runaway inflation and deflation
+- As inflation is corrosive to bonds, fixed-income investors watch hawkishly for any signs of inflation.
+- Central banks closely monitor inflation expectations and the output gap when making rate decisions.
+- Central banks contain inflation and deflation by directly changing interest rates or by altering interest rate expectations.
+- Over the past few decades, short-term interst rates have been the tool of choice to steer economies.
+
+### The Yield curve and why it matters
+
+##### Corporate Impact
+Spread: it measures how much more a business pays to borrow money than the government foes.
+
+In 2008, investors were worried about the recession sending companies into bankruptcy. This sent
+corporate bond prices down and so yields up. The same worries spurred incestors to seek out
+investments with no credit risk, such as U.S. government bonds. This sent the price of such bonds up and so yields down.
+These two effects drove a sharp divergence between corporate and government bond yields. As we learned earlier, a slowdown in economic
+activity is typically linked to deflastion.
+
+##### Consumer Impact
+
+##### Global Impact
+
+Summary:
+- The yield curve represents the cost of borrowing for various loan lengths.
+- Yield curves are naturally upwardly sloping due to elevated risk of long-term lending.
+- Corporate bonds are priced using a spread off the government yield curve so the yield curve indirectly regulates company funding.
+- Consumer borrowing for big-ticket items is priced off the yield curve.
+- Yields of developed economies are correlated, which means that the overall movement in yields has a global impact.
+
+### Movement in the Yield Curve
+Summary:
+- The far left of the yield curve is the overnight interest rate set by the central bank.
+- The far right of the yield curve is driven primarily by inflation expectations.
+- While the left-hand end of the yield curve is locked, the right-hand end floats freely.
+- A steep yield curve signals improving times.
+- A flat yield curve signal worsening times.
+- An inverted yield curve often precedes a recession.
+
+
+Summary of the module:
+1. The bond markets keep governments accountable
+Increased government spending and borrowing has driven growth in fixed income.
+Governments running deficits - that's most of them - are beholden to the bond markets.
+
+2. Bond yields are driven by creditworthiness, inflation, and interest rated.
+Poor creditworthiness, high inflation, and rising interest rates all send bond prices lower and bond yields higher. Inflation
+is public enemy number one to bond investors as it erodes the value of fixed repayments.
+
+3. Central banks guard against both inflation and deflation.
+Central banks manipulate interst-rate expectations to avoid vicious cycles of inflation and deflation.
+
+4. Central banks influence all borrowing costs via the yield curve.
+By setting interest rates, central banks influence governments, businesses, and consumers via the yield curve and its grip
+on the costs of borrowing.
+
+5. Changes in the shape of the yield curve can presage turning points in the economy.
+As the left-hand end of the yield curve is set by the central bank and the right-hand end shows beliefs about the future, the slope reveals the 
+direction in which the central bank is attempting to nudge the economy.
+
+
