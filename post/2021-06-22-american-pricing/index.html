@@ -16,7 +16,9 @@
 <meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://livian1107.github.io/blog/images/scarcity.jpg">
 <meta name=twitter:title content="American option pricing">
-<meta name=twitter:description content="Learning about ESG investing, ESG factors and why demand for sustainable and responsible investment is increasing.">
+<meta name=twitter:description content="Perpetual call/put Finite call/put
+Numerical solution
+ Binomial tree: longstaff-schwartz 线性回归 Heat Equation  Digital American Option - Barrier Option">
 </head>
 <body>
 <div class=main>
@@ -49,7 +51,7 @@
 <span class=date> Tue, Jun 22, 2021
 </span>
 <em class="fas fa-stopwatch"></em>
-<span class=reading-time>One-minute read</span>
+<span class=reading-time>2-minute read</span>
 </div>
 </div>
 <p>Perpetual call/put
@@ -74,6 +76,34 @@ Then e is a stopping time.</p>
 <p>Stopped process</p>
 <p>Theorem: a martingale, super martingale/sub-martingale stopped
 at a stopping time is a martingale</p>
+<h3 id=put-call-parity>Put-call parity</h3>
+<p>Put-call parity: a principle that defines the relationship between the price of
+European put and call options of the same class, that is, with the same
+underlying asset, strike price, and expiration date.</p>
+<p>Put-call parity says the price of a call option implies a certain fair price for the corresponding
+put option with the same strike price and expiration date. (and vice versa)</p>
+<p>If the put-call parity is violated, then arbitrage opportunities are born</p>
+<p>C + PV(x) = P + S</p>
+<h3 id=how-are-options-priced>How are options priced?</h3>
+<p>It is the sum of its intrinsic value, which is the difference between the current price
+of the current price of the underlying asset and the option&rsquo;s strike pirce,
+and time value, which directly related to the time left until that option&rsquo;s expiry.</p>
+<p>Model:
+Black-Scholes-Merton: BSM
+input: strike price, current price of the underlying instrument, time to expiration, risk-free rate,
+and volatility</p>
+<p>This model will spit out the option&rsquo;s fair market value.</p>
+<h3 id=example>Example</h3>
+<p>Protective put: a long stock position + a long put -> limit the downside of holding the stock
+Fiduciary call: a long call + cash equal to the present value of the stike price -> ensures that
+the investor has enough cash to exercise the option on the expiration date.</p>
+<h3 id=why-is-put-call-parity-important>Why is put-call parity important?</h3>
+<ul>
+<li>It allows you to calculate the approcimate value of a put or a call relative to its other components.</li>
+<li>If the principle violated, the prices of the put and call options fiverge so that an arbitrage opportunity exists.</li>
+<li>It offers opportunity for traders to theoretically earn a risk-free profit.</li>
+<li>It offers the flexibility to create synthetic positions.</li>
+</ul>
 </div>
 <div class=post-footer>
 <div class=info>
