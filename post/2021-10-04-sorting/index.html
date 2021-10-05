@@ -178,19 +178,17 @@ at the beginning. It maintains two subarrays.</p>
 <h4 id=binary-insertion-sort>Binary Insertion sort</h4>
 <h4 id=merge-sort>Merge Sort</h4>
 <p>Divide and Conquer</p>
-<blockquote>
-<p>MergeSort(arr[], l, r)
-If r > l
-1. Find the middle point to divide the array into two halves:<br>
-middle m = l+ (r-l)/2
-2. Call mergeSort for first half:<br>
-Call mergeSort(arr, l, m)
-3. Call mergeSort for second half:
-Call mergeSort(arr, m+1, r)
-4. Merge the two halves sorted in step 2 and 3:
-Call merge(arr, l, m, r)</p>
-</blockquote>
-<h4 id=iterative-merge-sort>Iterative Merge Sort</h4>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-Python data-lang=Python><span class=n>MergeSort</span><span class=p>(</span><span class=n>arr</span><span class=p>[],</span> <span class=n>l</span><span class=p>,</span>  <span class=n>r</span><span class=p>)</span>
+<span class=n>If</span> <span class=n>r</span> <span class=o>&gt;</span> <span class=n>l</span>
+     <span class=mf>1.</span> <span class=n>Find</span> <span class=n>the</span> <span class=n>middle</span> <span class=n>point</span> <span class=n>to</span> <span class=n>divide</span> <span class=n>the</span> <span class=n>array</span> <span class=n>into</span> <span class=n>two</span> <span class=n>halves</span><span class=p>:</span>  
+             <span class=n>middle</span> <span class=n>m</span> <span class=o>=</span> <span class=n>l</span><span class=o>+</span> <span class=p>(</span><span class=n>r</span><span class=o>-</span><span class=n>l</span><span class=p>)</span><span class=o>/</span><span class=mi>2</span>
+     <span class=mf>2.</span> <span class=n>Call</span> <span class=n>mergeSort</span> <span class=k>for</span> <span class=n>first</span> <span class=n>half</span><span class=p>:</span>   
+             <span class=n>Call</span> <span class=n>mergeSort</span><span class=p>(</span><span class=n>arr</span><span class=p>,</span> <span class=n>l</span><span class=p>,</span> <span class=n>m</span><span class=p>)</span>
+     <span class=mf>3.</span> <span class=n>Call</span> <span class=n>mergeSort</span> <span class=k>for</span> <span class=n>second</span> <span class=n>half</span><span class=p>:</span>
+             <span class=n>Call</span> <span class=n>mergeSort</span><span class=p>(</span><span class=n>arr</span><span class=p>,</span> <span class=n>m</span><span class=o>+</span><span class=mi>1</span><span class=p>,</span> <span class=n>r</span><span class=p>)</span>
+     <span class=mf>4.</span> <span class=n>Merge</span> <span class=n>the</span> <span class=n>two</span> <span class=n>halves</span> <span class=nb>sorted</span> <span class=ow>in</span> <span class=n>step</span> <span class=mi>2</span> <span class=ow>and</span> <span class=mi>3</span><span class=p>:</span>
+             <span class=n>Call</span> <span class=n>merge</span><span class=p>(</span><span class=n>arr</span><span class=p>,</span> <span class=n>l</span><span class=p>,</span> <span class=n>m</span><span class=p>,</span> <span class=n>r</span><span class=p>)</span>
+</code></pre></div><h4 id=iterative-merge-sort>Iterative Merge Sort</h4>
 <h4 id=merge-sort-for-linkedlist>Merge Sort for LinkedList</h4>
 <h4 id=3-way-merge-sort>3-way Merge Sort</h4>
 <h4 id=quick-sort>Quick Sort</h4>
