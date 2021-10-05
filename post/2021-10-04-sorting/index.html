@@ -49,13 +49,13 @@
 <span class=date> Mon, Oct 4, 2021
 </span>
 <em class="fas fa-stopwatch"></em>
-<span class=reading-time>2-minute read</span>
+<span class=reading-time>8-minute read</span>
 </div>
 </div>
 <h5 id=what-is-in-place-soring>What is in-place soring?</h5>
 <p>Use constant extra space for producing the output by modifying
 the given array only.</p>
-<p>E.g. Insertion sort, selection sort.
+<p>E.g. Insertion sort, selection sort, heap sort.
 (Merge sort and counting sort are not)</p>
 <h5 id=what-are-internal--external-sorting>What are internal & external sorting?</h5>
 <p>External sorting: when all data that needs to be sorted cannot be placed
@@ -85,92 +85,280 @@ the position of elements into considertaion.</p>
 can be modified to be stable by changing the key comparison operation.</p>
 </blockquote>
 <h5 id=time-complexity>Time Complexity</h5>
+<p>(considering to sort in ascending order) </p>
 <table>
 <thead>
 <tr>
 <th></th>
-<th style=text-align:center>Best</th>
-<th style=text-align:center>Average</th>
-<th style=text-align:center>Worst</th>
+<th style=text-align:left>Best</th>
+<th style=text-align:left>Average</th>
+<th style=text-align:left>Worst</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Selection Sort</td>
-<td style=text-align:center>Ω(n^2)</td>
-<td style=text-align:center>θ(n^2)</td>
-<td style=text-align:center>O(n^2)</td>
+<td style=text-align:left>Ω(n^2)</td>
+<td style=text-align:left>θ(n^2)</td>
+<td style=text-align:left>O(n^2)</td>
 </tr>
 <tr>
+<td>*no matter what scenario, selection sort need to go through the whole list of n elements to find the ith element</td>
 <td></td>
-<td style=text-align:center>no matter what, selection sort need to go through the whole list of n elements to find the ith element</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td>Bubble Sort</td>
-<td style=text-align:center>Ω(n)</td>
-<td style=text-align:center>θ(n^2)</td>
-<td style=text-align:center>O(n^2)</td>
+<td style=text-align:left>Ω(n)</td>
+<td style=text-align:left>θ(n^2)</td>
+<td style=text-align:left>O(n^2)</td>
+</tr>
+<tr>
+<td></td>
+<td style=text-align:left>In ascending order</td>
+<td style=text-align:left></td>
+<td style=text-align:left>In descending order</td>
 </tr>
 <tr>
 <td>Insertion Sort</td>
-<td style=text-align:center>Ω(n)</td>
-<td style=text-align:center>θ(n^2)</td>
-<td style=text-align:center>O(n^2)</td>
+<td style=text-align:left>Ω(n)</td>
+<td style=text-align:left>θ(n^2)</td>
+<td style=text-align:left>O(n^2)</td>
+</tr>
+<tr>
+<td></td>
+<td style=text-align:left>In ascending order</td>
+<td style=text-align:left></td>
+<td style=text-align:left>In descending order</td>
 </tr>
 <tr>
 <td>Heap Sort</td>
-<td style=text-align:center>Ω(n log(n))</td>
-<td style=text-align:center>θ(n log(n))</td>
-<td style=text-align:center>O(n log(n))</td>
+<td style=text-align:left>Ω(n log(n))</td>
+<td style=text-align:left>θ(n log(n))</td>
+<td style=text-align:left>O(n log(n))</td>
 </tr>
 <tr>
 <td>Quick Sort</td>
-<td style=text-align:center>Ω(n log(n))</td>
-<td style=text-align:center>θ(n log(n))</td>
-<td style=text-align:center>O(n^2)</td>
+<td style=text-align:left>Ω(n log(n))</td>
+<td style=text-align:left>θ(n log(n))</td>
+<td style=text-align:left>O(n^2)</td>
 </tr>
 <tr>
 <td>Merge Sort</td>
-<td style=text-align:center>Ω(n log(n))</td>
-<td style=text-align:center>θ(n log(n))</td>
-<td style=text-align:center>O(n log(n))</td>
+<td style=text-align:left>Ω(n log(n))</td>
+<td style=text-align:left>θ(n log(n))</td>
+<td style=text-align:left>O(n log(n))</td>
 </tr>
 <tr>
 <td>Bucket Sort</td>
-<td style=text-align:center>Ω(n+k)</td>
-<td style=text-align:center>θ(n+k)</td>
-<td style=text-align:center>O(n^2)</td>
+<td style=text-align:left>Ω(n+k)</td>
+<td style=text-align:left>θ(n+k)</td>
+<td style=text-align:left>O(n^2)</td>
 </tr>
 <tr>
 <td>Radix Sort</td>
-<td style=text-align:center>Ω(nk)</td>
-<td style=text-align:center>θ(nk)</td>
-<td style=text-align:center>O(nk)</td>
+<td style=text-align:left>Ω(nk)</td>
+<td style=text-align:left>θ(nk)</td>
+<td style=text-align:left>O(nk)</td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<p>The lower bound for Comparison based sorting algorithm (Merge Sort, Heap Sort, Quick-Sort .. etc) is Ω(nLogn),
+i.e., they cannot do better than nLogn.</p>
+</blockquote>
 <h4 id=selection-sort>Selection Sort</h4>
+<p>Repeatly finding the minimum element from unsorted part and putting it
+at the beginning. It maintains two subarrays.</p>
 <h4 id=bubble-sort>Bubble Sort</h4>
 <h4 id=recursive-bubble-sort>Recursive Bubble Sort</h4>
 <h4 id=insertion-sort>Insertion Sort</h4>
 <h4 id=recursive-insertion-sort>Recursive Insertion Sort</h4>
 <h4 id=binary-insertion-sort>Binary Insertion sort</h4>
 <h4 id=merge-sort>Merge Sort</h4>
+<p>Divide and Conquer</p>
+<blockquote>
+<p>MergeSort(arr[], l, r)
+If r > l
+1. Find the middle point to divide the array into two halves:<br>
+middle m = l+ (r-l)/2
+2. Call mergeSort for first half:<br>
+Call mergeSort(arr, l, m)
+3. Call mergeSort for second half:
+Call mergeSort(arr, m+1, r)
+4. Merge the two halves sorted in step 2 and 3:
+Call merge(arr, l, m, r)</p>
+</blockquote>
 <h4 id=iterative-merge-sort>Iterative Merge Sort</h4>
 <h4 id=merge-sort-for-linkedlist>Merge Sort for LinkedList</h4>
 <h4 id=3-way-merge-sort>3-way Merge Sort</h4>
 <h4 id=quick-sort>Quick Sort</h4>
+<p>Divide and Conquer</p>
+<p>It picks an element as pivot and partitions the given array around the picked pivot. There are many different versions of quickSort that pick pivot in different ways.</p>
+<ol>
+<li>Always pick first element as pivot.</li>
+<li>Always pick last element as pivot.</li>
+<li>Pick a random element as pivot.</li>
+<li>Pick median as pivot.</li>
+</ol>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-Python data-lang=Python><span class=o>/*</span> <span class=n>low</span>  <span class=o>--&gt;</span> <span class=n>Starting</span> <span class=n>index</span><span class=p>,</span>  <span class=n>high</span>  <span class=o>--&gt;</span> <span class=n>Ending</span> <span class=n>index</span> <span class=o>*/</span>
+<span class=n>quickSort</span><span class=p>(</span><span class=n>arr</span><span class=p>[],</span> <span class=n>low</span><span class=p>,</span> <span class=n>high</span><span class=p>)</span>
+<span class=p>{</span>
+    <span class=k>if</span> <span class=p>(</span><span class=n>low</span> <span class=o>&lt;</span> <span class=n>high</span><span class=p>)</span>
+    <span class=p>{</span>
+        <span class=o>/*</span> <span class=n>pi</span> <span class=ow>is</span> <span class=n>partitioning</span> <span class=n>index</span><span class=p>,</span> <span class=n>arr</span><span class=p>[</span><span class=n>pi</span><span class=p>]</span> <span class=ow>is</span> <span class=n>now</span>
+           <span class=n>at</span> <span class=n>right</span> <span class=n>place</span> <span class=o>*/</span>
+        <span class=n>pi</span> <span class=o>=</span> <span class=n>partition</span><span class=p>(</span><span class=n>arr</span><span class=p>,</span> <span class=n>low</span><span class=p>,</span> <span class=n>high</span><span class=p>);</span>
+
+        <span class=n>quickSort</span><span class=p>(</span><span class=n>arr</span><span class=p>,</span> <span class=n>low</span><span class=p>,</span> <span class=n>pi</span> <span class=o>-</span> <span class=mi>1</span><span class=p>);</span>  <span class=o>//</span> <span class=n>Before</span> <span class=n>pi</span>
+        <span class=n>quickSort</span><span class=p>(</span><span class=n>arr</span><span class=p>,</span> <span class=n>pi</span> <span class=o>+</span> <span class=mi>1</span><span class=p>,</span> <span class=n>high</span><span class=p>);</span> <span class=o>//</span> <span class=n>After</span> <span class=n>pi</span>
+    <span class=p>}</span>
+<span class=p>}</span>
+</code></pre></div><p>Quick Sort V.S Merge Sort</p>
+<p><em>Quick sort</em> is an internal algorithm which is based on divide and conquer strategy. In this:</p>
+<ol>
+<li>The array of elements is divided into parts repeatedly until it is not possible to divide it further.</li>
+<li>It is also known as “partition exchange sort”.</li>
+<li>It uses a key element (pivot) for partitioning the elements.</li>
+<li>One left partition contains all those elements that are smaller than the pivot and one right partition contains all those elements which are greater than the key element.</li>
+</ol>
+<p><em>Merge sort</em> is an external algorithm and based on divide and conquer strategy. In this:</p>
+<ol>
+<li>The elements are split into two sub-arrays (n/2) again and again until only one element is left.</li>
+<li>Merge sort uses additional storage for sorting the auxiliary array.</li>
+<li>Merge sort uses three arrays where two are used for storing each half, and the third external one is used to store the final sorted list by merging other two and each array is then sorted recursively.</li>
+<li>At last, the all sub arrays are merged to make it ‘n’ element size of the array.</li>
+</ol>
+<h5 id=partition-of-elements-in-the-array->Partition of elements in the array :</h5>
+<p>In the merge sort, the array is parted into just 2 halves (i.e. n/2).
+whereas
+In case of quick sort, the array is parted into any ratio. There is no compulsion of dividing the array of elements into equal parts in quick sort.</p>
+<h5 id=worst-case-complexity->Worst case complexity :</h5>
+<p>The worst case complexity of quick sort is O(n2) as there is need of lot of comparisons in the worst condition.
+whereas
+In merge sort, worst case and average case has same complexities O(n log n).
+Usage with datasets :
+Merge sort can work well on any type of data sets irrespective of its size (either large or small).
+whereas
+The quick sort cannot work well with large datasets.</p>
+<h5 id=additional-storage-space-requirement->Additional storage space requirement :</h5>
+<p>Merge sort is not in place because it requires additional memory space to store the auxiliary arrays.
+whereas
+The quick sort is in place as it doesn’t require any additional storage.</p>
+<h5 id=efficiency->Efficiency :</h5>
+<p>Merge sort is more efficient and works faster than quick sort in case of larger array size or datasets.
+whereas
+Quick sort is more efficient and works faster than merge sort in case of smaller array size or datasets.</p>
+<h5 id=sorting-method->Sorting method :</h5>
+<p>The quick sort is internal sorting method where the data is sorted in main memory.
+whereas
+The merge sort is external sorting method in which the data that is to be sorted cannot be accommodated in the memory and needed auxiliary memory for sorting.</p>
+<h5 id=stability->Stability :</h5>
+<p>Merge sort is stable as two elements with equal value appear in the same order in sorted output as they were in the input unsorted array.
+whereas
+Quick sort is unstable in this scenario. But it can be made stable using some changes in code.</p>
+<h5 id=preferred-for->Preferred for :</h5>
+<p>Quick sort is preferred for <em>arrays</em>.
+whereas
+Merge sort is preferred for <em>linked lists</em>.</p>
+<h5 id=locality-of-reference->Locality of reference :</h5>
+<p>Quicksort exhibits good cache locality and this makes quicksort faster than merge sort (in many cases like in virtual memory environment).</p>
+<table>
+<thead>
+<tr>
+<th style=text-align:left>Basis for comparison</th>
+<th style=text-align:left>Quick Sort</th>
+<th style=text-align:left>Merge Sort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:left>The partition of elements in the array</td>
+<td style=text-align:left>The splitting of a array of elements is in any ratio, not necessarily divided into half.</td>
+<td style=text-align:left>In the merge sort, the array is parted into just 2 halves (i.e. n/2).</td>
+</tr>
+<tr>
+<td style=text-align:left>Worst case complexity</td>
+<td style=text-align:left>O(n2)</td>
+<td style=text-align:left>O(nlogn)</td>
+</tr>
+<tr>
+<td style=text-align:left>Works well on</td>
+<td style=text-align:left>It works well on smaller array</td>
+<td style=text-align:left>It operates fine on any size of array</td>
+</tr>
+<tr>
+<td style=text-align:left>Speed of execution</td>
+<td style=text-align:left>It work faster than other sorting algorithms for small data set like Selection sort etc</td>
+<td style=text-align:left>It has a consistent speed on any size of data</td>
+</tr>
+<tr>
+<td style=text-align:left>Additional storage space requirement</td>
+<td style=text-align:left>Less(In-place)</td>
+<td style=text-align:left>More(not In-place)</td>
+</tr>
+<tr>
+<td style=text-align:left>Efficiency</td>
+<td style=text-align:left>Inefficient for larger arrays</td>
+<td style=text-align:left>More efficient</td>
+</tr>
+<tr>
+<td style=text-align:left>Sorting method</td>
+<td style=text-align:left>Internal</td>
+<td style=text-align:left>External</td>
+</tr>
+<tr>
+<td style=text-align:left>Stability</td>
+<td style=text-align:left>Not Stable</td>
+<td style=text-align:left>Stable</td>
+</tr>
+<tr>
+<td style=text-align:left>Preferred for</td>
+<td style=text-align:left>for Arrays</td>
+<td style=text-align:left>for Linked Lists</td>
+</tr>
+<tr>
+<td style=text-align:left>Locality of reference</td>
+<td style=text-align:left>good</td>
+<td style=text-align:left>poor</td>
+</tr>
+</tbody>
+</table>
 <h4 id=iterative-quick-sort>Iterative Quick Sort</h4>
 <h4 id=quick-sort-on-singly-linkedlist>Quick Sort on Singly LinkedList</h4>
 <h4 id=quick-sort-on-doubly-linkedlist>Quick Sort on Doubly LinkedList</h4>
 <h4 id=3-way-quick-sort-dutch-national-flag>3-way Quick Sort (Dutch National Flag)</h4>
 <h4 id=heap-sort>Heap Sort</h4>
+<p>A comparison-based sorting technique based on Binary Heap data structure.
+Similar to selection sort to find the minimum element and place it at the beginning.</p>
+<h5 id=what-is-binary-heap>what is Binary Heap?</h5>
+<p>A complete binary tree where items are stored in a special order such that
+the value in a parent node is greater than the values in its two children nodes.
+It can be represented by a binary tree or array.</p>
+<ul>
+<li>Array: since a binary heap is a complete binary tree, it can be represented by an
+array and the array-based representation is space-efficient. If parent node is stored at
+index i, the left child can be calculated by (2<em>i + 1) and the right child by (2</em>i + 2).</li>
+</ul>
 <h4 id=counting-sort>Counting Sort</h4>
+<p>Counting sort is a linear time sorting algorithm that sort in O(n+k) time when elements are in the range from 1 to k.</p>
 <h4 id=radix-sort>Radix Sort</h4>
+<p>The idea of Radix Sort is to do digit by digit sort starting from least significant digit to most significant digit. Radix sort uses counting sort as a subroutine to sort.</p>
+<h5 id=is-radix-sort-preferable-to-comparison-based-sorting-algorithms-like-quick-sort>Is Radix Sort preferable to Comparison based sorting algorithms like Quick-Sort?</h5>
+<p>If we have log2n bits for every digit, the running time of Radix appears to be better than Quick Sort for a wide range of input numbers. The constant factors hidden in asymptotic notation are higher for Radix Sort and Quick-Sort uses hardware caches more effectively.
+Also, Radix sort uses counting sort as a subroutine and counting sort takes extra space to sort numbers.</p>
 <h4 id=bucket-sort>Bucket Sort</h4>
-<h4 id=shell-sort>Shell Sort</h4>
+<p>Bucket sort is mainly useful when input is uniformly distributed over a range. For example, consider the following problem.</p>
+<p>ounting sort can not be applied here as we use keys as index in counting sort. Here keys are floating point numbers.<br>
+The idea is to use bucket sort.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-Python data-lang=Python><span class=n>bucketSort</span><span class=p>(</span><span class=n>arr</span><span class=p>[],</span> <span class=n>n</span><span class=p>)</span>
+<span class=mi>1</span><span class=p>)</span> <span class=n>Create</span> <span class=n>n</span> <span class=n>empty</span> <span class=n>buckets</span> <span class=p>(</span><span class=n>Or</span> <span class=n>lists</span><span class=p>)</span><span class=o>.</span>
+<span class=mi>2</span><span class=p>)</span> <span class=n>Do</span> <span class=n>following</span> <span class=k>for</span> <span class=n>every</span> <span class=n>array</span> <span class=n>element</span> <span class=n>arr</span><span class=p>[</span><span class=n>i</span><span class=p>]</span><span class=o>.</span>
+<span class=o>.......</span><span class=n>a</span><span class=p>)</span> <span class=n>Insert</span> <span class=n>arr</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=n>into</span> <span class=n>bucket</span><span class=p>[</span><span class=n>n</span><span class=o>*</span><span class=n>array</span><span class=p>[</span><span class=n>i</span><span class=p>]]</span>
+<span class=mi>3</span><span class=p>)</span> <span class=n>Sort</span> <span class=n>individual</span> <span class=n>buckets</span> <span class=n>using</span> <span class=n>insertion</span> <span class=n>sort</span><span class=o>.</span>
+<span class=mi>4</span><span class=p>)</span> <span class=n>Concatenate</span> <span class=nb>all</span> <span class=nb>sorted</span> <span class=n>buckets</span><span class=o>.</span>
+</code></pre></div><h4 id=shell-sort>Shell Sort</h4>
 <h4 id=tim-sort>Tim Sort</h4>
 <h4 id=comb-sort>Comb Sort</h4>
 <h4 id=pigeonhole-sort>Pigeonhole Sort</h4>
@@ -188,6 +376,7 @@ can be modified to be stable by changing the key comparison operation.</p>
 <h4 id=tree-sort>Tree Sort</h4>
 <h4 id=cartesian-tree-sorting>Cartesian Tree Sorting</h4>
 <h4 id=odd-even-sort--brick-sort>Odd-Even Sort / Brick Sort</h4>
+<p>(credit to <a href=https://www.geeksforgeeks.org/sorting-algorithms/#Basic>GeeksforGeek</a>)</p>
 </div>
 <div class=post-footer>
 <div class=info>
