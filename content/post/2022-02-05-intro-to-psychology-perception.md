@@ -45,7 +45,7 @@ How do you get things into LTM?
 2. Mnemonics - tricks, vivid images
 3. Understanding
 
-{{< youtube wU6PoUg7jXsA >}}
+{{< youtube U6PoUg7jXsA >}}
 
 Everyone from the memory contest would tell that they just have average memory. However, they've all trained themselves to perform these utterly miraculous feats of memory, using a set of ancient techniques (invented in Greece).
 
