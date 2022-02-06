@@ -1,7 +1,7 @@
 +++
 author = "Liwen"
 title = "Introduction to Psychology - Perception and Attention & Memory"
-date = "2022-2-5"
+date = "2022-02-05"
 description = ""
 tags = [
     "Introduction to Psychology"
@@ -45,7 +45,7 @@ How do you get things into LTM?
 2. Mnemonics - tricks, vivid images
 3. Understanding
 
-[![TED - Joshua Foer - Feats of memory anyone can do]({https://img.youtube.com/vi/U6PoUg7jXsA/0.jpg})]({https://youtu.be/U6PoUg7jXsA} "TED - Joshua Foer - Feats of memory anyone can do")
+{{< youtube wU6PoUg7jXsA >}}
 
 Everyone from the memory contest would tell that they just have average memory. However, they've all trained themselves to perform these utterly miraculous feats of memory, using a set of ancient techniques (invented in Greece).
 

@@ -1,7 +1,7 @@
 +++
 author = "Liwen"
 title = "Introduction to Psychology - Language"
-date = "2022-1-30"
+date = "2022-01-30"
 description = ""
 tags = [
     "Introduction to Psychology"
