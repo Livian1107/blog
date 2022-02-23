@@ -57,4 +57,30 @@ Memory Palace: visual, spatial memory. To create this imagined edifice in the mi
 
 Great memories are learned. Our lives are the sum of our memories. how much are we willing to lose from our already short lives, by losing ourselves in our iPhones, by not paying attention to the human being across from us, by being so lazy that we're not willing to process deeply. There are incredible latent in all of us. But if you want to live a memorable life, you have to be the kind of person who remembers to remember.
 
-(credit to [Coursera](https://www.coursera.org/learn/introduction-psychology/home/week/2))
+
+#### Remembering
+How do you get things out of memory?
+1. Retrieval cues
+2. The compatibility principle
+3. Searching strategies
+
+#### Failures of Memory
+Why do we forget things?
+1. Decay
+2. Interference
+3. Changes of retrieval cues
+
+Forgetting through brain damage.
+- Retrograde amnesia: loss of memories prior to stroke or accident
+- Anterograde amnesia: loss of capacity to form new memories
+
+#### False memories
+How do our memories become distorted?
+1. Expectations
+2. Leading questions
+3. Hypnosis
+4. Repressed memories
+5. Flashblub memories
+
+
+(credit to [Coursera](https://www.coursera.org/learn/introduction-psychology/home/week/3))
